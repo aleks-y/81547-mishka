@@ -5,8 +5,41 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <div class="page-wraper">
+      <header class="header-main">
+        <div class="logo-main">
+          <img src="http://placehold.it/86x35" width="86" height="35" alt="логотип Мишки">
+        </div>
+        <nav class="nav-main nav-main--closed">
+          <button class="nav-main__toogle" type="button"></button>
+          <div class="nav-main__wraper">
+            <ul class="nav-main__list">
+              <li class="nav-main__item">
+                <a href="#" class="nav-main__link">Каталог товаров</a>
+              </li>
+              <li class="nav-main__item">
+                <a href="#" class="nav-main__link">Вязание на заказ</a>
+              </li>
+              <li class="nav-main__item">
+                <div class="site-search">
+                  <form action="#" method="post" class="site-search__form">
+                    <input type="search" class="site-search__input-search" placeholder="Поиск по сайту">
+                    <input type="submit" class="site-search__input-submit">
+                  </form>
+                </div>
+              </li>
+              <li class="nav-main__item">
+                <div class="cart">
+                  <a href="#" class="cart__link">
+                    <span class="cart__title">Корзина: </span>
+                    <span class="cart__status">пока пуста</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
   </body>
 </html>
