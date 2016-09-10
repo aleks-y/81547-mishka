@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Устинов](https://up.htmlacademy.ru/adaptive/8/user/81547).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Рубец] (https://htmlacademy.ru/profile/id41580).
 
 ---
 
