@@ -40,9 +40,64 @@
           </div>
         </nav>
       </header>
+      <main>
+        <h1 class="page-title page-title--inner">Каталог товаров</h1>
+        <section class="catalog">
+          <h2 class="visualy-hidden">Список товаров</h2>
+          <div class="catalog__item">
+            <div class="catalog__image">
+              <img src="http://placehold.it/260x195" width="260" height="195" alt="Фото игрушки Зайчик-попрыгайчик">
+            </div>
+            <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
+            <p class="catalog__short-description">Рост 30&nbsp;см, вес 200&nbsp;г</p>
+            <p class="catalog__price">1&nbsp;200&nbsp;руб.</p>
+            <button class="catalog__add-to-cart" type="button"></button>
+          </dvi>
+          <div class="catalog__item">
+            <div class="catalog__image">
+              <img src="http://placehold.it/260x195" width="260" height="195" alt="Фото товара Корзинка для белья">
+            </div>
+            <h3 class="catalog__title">Корзинка для белья</h3>
+            <p class="catalog__short-description">Диаметр 15&nbsp;см, выссота 10&nbsp;см</p>
+            <p class="catalog__price">690&nbsp;руб.</p>
+            <button class="catalog__add-to-cart" type="button"></button>
+          </dvi>
+          <div class="catalog__item">
+            <div class="catalog__image">
+              <img src="http://placehold.it/260x195" width="260" height="195" alt="Фото товара Большая корзинка для игрушек">
+            </div>
+            <h3 class="catalog__title">Большая корзинка для игрушек</h3>
+            <p class="catalog__short-description">Диаметр 30 &nbsp;см, высота 30&nbsp;см</p>
+            <p class="catalog__price">1&nbsp;500&nbsp;руб.</p>
+            <button class="catalog__add-to-cart" type="button"></button>
+          </dvi>
+        </section>
+        <section class="video">
+          <h2 class="video__title">Процесс производства</h2>
+          <div class="video__player">
 
-
-
+          </div>
+          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="btn" type="button">Сделать заказ</button>
+        </section>
+      </main>
+      <div class="modal-order">
+        <div class="modal-order__wraper">
+          <h2 class="modal-order__title">Добавить в корзину</h2>
+          <div class="modal-order__product-size">
+            <p>Выберите размер:</p>
+            <div class="modal-order__size-controls">
+              <input type="radiobutton" class="modal-order__size-conrol" name="product-size-s" id="product-size-s">
+              <label for="product-size-s" class="modal-order__size-label">S</label>
+              <input type="radiobutton" class="modal-order__size-conrol" name="product-size-m" id="product-size-m">
+              <label for="product-size-m" class="modal-order__size-label">M</label>
+              <input type="radiobutton" class="modal-order__size-conrol" name="product-size-l" id="product-size-l">
+              <label for="product-size-l" class="modal-order__size-label">L</label>
+            </div>
+            <button class="btn btn--modal-order" type="button">Добавить</button>
+          </div>
+        </div>
+      </div>
       <footer class="footer-main">
         <div class="social">
           <ul class="social__list">
