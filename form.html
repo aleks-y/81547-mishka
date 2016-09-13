@@ -48,10 +48,10 @@
             <div class="order-form__fieldset">
               <h6 class="order-form__subtitle">Тип</h6>
               <label class="input-radio">Аксесуар для интерьера
-                <input type="radiobutton" name="order-type-accessory" checked>
+                <input type="radio" name="order-type-accessory" checked>
               </label>
               <label class="input-radio">Детская игрушка
-                <input type="radiobutton" name="order-type-toy">
+                <input type="radio" name="order-type-toy">
               </label>
             </div>
             <div class="order__fieldset">
@@ -76,22 +76,40 @@
               </label>
             </div>
             <div class="order__fieldset">
-
+              <h6 class="order-form__subtitle">ФИО</h6>
+              <label class="input-text">Имя:
+                <input type="text" name="order-user-first-name" placeholder="Введите ваше имя" required>
+              </label>
+              <label class="input-text">Фамилия
+                <input type="text" name="order-user-second-name" placeholder="Укажите фамилию" required>
+              </label>
+              <label class="input-text">Отчество:
+                <input type="text" name="order-user-parent-name" placeholder="Отчество, если желаете">
+              </label>
             </div>
             <div class="order__fieldset">
-
+              <h6 class="order-form__subtitle">Тел</h6>
+              <label class="input-phone">
+                <input type="phone" name="order-user-phone" placeholder="+7 ХХХ ХХ ХХ" required>
+              </label>
             </div>
             <div class="order__fieldset">
-
+              <h6 class="order-form__subtitle">E-mail</h6>
+              <label class="input-email">
+                <input type="e-mail" name="order-user-email" placeholder="Ваш Email" required>
+              </label>
             </div>
             <div class="order__fieldset">
-
+              <h6 class="order-form__subtitle">Доп</h6>
+              <label class="input-message">
+                <input type="text-message" name="order-user-message" placeholder="Опишите все ваши пожелания к заказу" required>
+              </label>
             </div>
+            <p class="order__notice">Все поля обязательны для заполнения</p>
+            <button class="btn btn--order-submit" type="submit">Отправить заказ</button>
           </form>
         </div>
       </main>
-
-
       <footer class="footer-main">
         <div class="social">
           <ul class="social__list">
