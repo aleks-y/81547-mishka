@@ -80,23 +80,6 @@
             <p>Цена: 990 руб.</p>
           </div>
           <button class="btn btn--order" type="button">Заказать</button>
-          <div class="modal-order">
-            <div class="modal-order__wraper">
-              <h2 class="modal-order__title">Добавить в корзину</h2>
-              <div class="modal-order__product-size">
-                <p>Выберите размер:</p>
-                <div class="modal-order__size-controls">
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-s" id="product-size-s">
-                  <label for="product-size-s" class="modal-order__size-label">S</label>
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-m" id="product-size-m">
-                  <label for="product-size-m" class="modal-order__size-label">M</label>
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-l" id="product-size-l">
-                  <label for="product-size-l" class="modal-order__size-label">L</label>
-                </div>
-                <button class="btn btn--modal-order" type="button">Добавить</button>
-              </div>
-            </div>
-          </div>
         </section>
         <section class="about">
           <h2 class="about__title">Коротко о нас:</h2>
@@ -143,6 +126,28 @@
           <button class="btn btn--feedback" type="button">Напишите нам</button>
         </section>
       </main>
+      <div class="modal-order">
+        <div class="modal-order__wraper">
+          <h2 class="modal-order__title">Добавить в корзину</h2>
+          <div class="modal-order__product-size">
+            <form action="#" class="modal-order__form">
+              <h3 class="modal-order__form-title">Выберите размер:</h3>
+              <div class="modal-order__size-controls">
+                <label for="product-size-s" class="modal-order__size-label">S
+                  <input type="radio" class="modal-order__size-conrol" name="product-size-s" id="product-size-s">
+                </label>
+                <label for="product-size-m" class="modal-order__size-label">M
+                  <input type="radio" class="modal-order__size-conrol" name="product-size-m" id="product-size-m">
+                </label>
+                <label for="product-size-l" class="modal-order__size-label">L
+                  <input type="radio" class="modal-order__size-conrol" name="product-size-l" id="product-size-l">
+                </label>
+              </div>
+              <button class="btn btn--modal-order" type="button">Добавить</button>
+            </form>
+          </div>
+        </div>
+      </div>
       <footer class="footer-main">
         <div class="social">
           <ul class="social__list">
