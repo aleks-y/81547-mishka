@@ -1,0 +1,36 @@
+.about {
+  padding: 0 30px;
+
+  font-family: @main-site-font;
+
+  background-color: @main-background-color;
+}
+
+.about__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+
+  color: @main-header-color;
+}
+
+.about__list {
+  .ul-reset;
+}
+
+.about__item {
+  position: relative;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: auto; //? в макете "Авто"
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+  }
+}
