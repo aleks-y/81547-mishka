@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="page-wraper">
       <header class="header-main">
         <div class="logo-main">
-          <img src="http://placehold.it/86x35" width="86" height="35" alt="логотип Мишки">
+          <img src="img/logo-mobile.svg" width="86" height="36" alt="логотип Мишки">
         </div>
         <nav class="nav-main nav-main--closed">
           <button class="nav-main__toogle" type="button">Menu</button>
@@ -21,20 +22,13 @@
                 <a href="#" class="nav-main__link">Вязание на заказ</a>
               </li>
               <li class="nav-main__item">
-                <div class="site-search">
-                  <form action="#" method="get" class="site-search__form">
-                    <input type="search" class="site-search__input-search" placeholder="Поиск по сайту">
-                    <input type="submit" class="site-search__input-submit">
-                  </form>
-                </div>
+                <a href="#" class="nav-main__link nav-main__link--search">Поиск по сайту</a>
               </li>
               <li class="nav-main__item">
-                <div class="cart">
-                  <a href="#" class="cart__link">
-                    <span class="cart__title">Корзина: </span>
-                    <span class="cart__status">пока пуста</span>
-                  </a>
-                </div>
+                <a href="#" class="nav-main__link nav-main__link--cart">
+                  <span class="cart__title">Корзина: </span>
+                  <span class="cart__status">пока пуста</span>
+                 </a>
               </li>
             </ul>
           </div>
@@ -44,21 +38,21 @@
         <section class="banner">
           <h1 class="banner__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
         </section>
-        <section class="catalog">
+        <section class="catalog-categories">
           <h2 class="visualy-hidden">Категории товаров</h2>
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <a href="#" class="catalog__link catalog__link--interior">Предметы интерьера</a>
+          <ul class="catalog-categories__list">
+            <li class="catalog-categories__item">
+              <a href="#" class="catalog-categories__link catalog-categories__link--interior">Предметы интерьера</a>
             </li>
-            <li class="catalog__item">
-              <a href="#" class="catalog__link catalog__link--toys">Детсткие игрушки</a>
+            <li class="catalog-categories__item">
+              <a href="#" class="catalog-categories__link catalog-categories__link--toys">Детсткие игрушки</a>
             </li>
           </ul>
         </section>
         <section class="product product--of-the-week">
           <h2 class="product__title">Вязаные корзинки</h2>
           <div class="product__label">товар недели</div>
-          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
           <table class="product__features">
             <caption class="visualy-hidden">Характеристики вязаной корзинки</caption>
             <tr>
@@ -75,7 +69,7 @@
             </tr>
           </table>
           <div class="product__image">
-            <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           </div>
           <div class="product__price">Цена: 990 руб.</div>
           <button class="btn btn--order" type="button">Заказать</button>
@@ -95,15 +89,15 @@
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__list">
             <div class="reviews__item">
-              <p class="reviews__user-text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+              <p class="reviews__user-text">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильнее, а&nbsp;также набирают больше лайков!</p>
               <div class="reviews__user-name">Анастасия Красильникова</div>
               <div class="reviews__user-email">@misssssiskras</div>
             </div>
             <div class="slider-nav">
-              <a href="#" class="slider-nav__btn slider-nav__btn--prew" type="button">Предыдущий отзыв</a>
-              <a href="#" class="slider-nav__btn slider-nav__btn--next" type="button">Следующий отзыв</a>
+              <a href="#" class="slider-nav__btn slider-nav__btn--prew">Предыдущий отзыв</a>
+              <a href="#" class="slider-nav__btn slider-nav__btn--next">Следующий отзыв</a>
             </div>
-            <a href="#" class="btn btn--add-review" type="button">Написать отзыв</a>
+            <a href="#" class="btn btn--add-review">Написать отзыв</a>
           </div>
         </section>
         <section class="contacts">
@@ -111,14 +105,14 @@
           <table class="contacts__info">
             <caption class="visualy-hidden">Контактная информация</caption>
             <tr>
-              <th>e-mail:</th>
-              <td>
-                <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              <th class="contacts__info-title">e-mail:</th>
+              <td class="contacts__info-content">
+                <a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a>
               </td>
             </tr>
             <tr>
-              <th>адрес:</th>
-              <td>г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101</td>
+              <th class="contacts__info-title">адрес:</th>
+              <td class="contacts__info-content">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101</td>
             </tr>
           </table>
           <div class="contacts__map"></div>
@@ -151,13 +145,13 @@
         <div class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a href="#" class="social__link social__link--insta">Instagramm</a>
+              <a href="#" class="social__link social__link--instagramm">Instagramm</a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--fb">Facebook</a>
+              <a href="#" class="social__link social__link--facebook">Facebook</a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--tw">Twitter</a>
+              <a href="#" class="social__link social__link--twitter">Twitter</a>
             </li>
           </ul>
         </div>

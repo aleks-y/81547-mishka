@@ -1,0 +1,36 @@
+.nav-main {
+  position: relative;
+
+  &--closed {
+    display: block;
+  }
+}
+
+.nav-main__togle {
+  position: absolute;
+
+  font-size: 0;
+}
+
+.nav-main__wraper {
+  position: relative;
+}
+
+.nav-main__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.nav-main__item {
+  border-bottom: 1px solid @main-border-color;
+}
+
+.nav-main__link {
+  .font(@main-font-regular; 17px; 17px);
+  text-align: left;
+
+  color: @main-text-color;
+  text-decoration: none;
+}

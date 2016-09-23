@@ -1,0 +1,30 @@
+.about {
+  padding: 0 30px;
+
+  background-color: @main-background-color;
+}
+
+.about__title {
+  .font(@main-font-bold; 25px; 30px);
+  text-align: left;
+
+  color: @main-header-color;
+}
+
+.about__list {
+  .ul-reset;
+}
+
+.about__item {
+  position: relative;
+
+  .font(@main-font-bold; 17px; 17px);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+  }
+}
