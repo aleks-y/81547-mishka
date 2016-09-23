@@ -1,20 +1,12 @@
 .reviews {
-  font-family: @main-site-font;
-
   background-color: @main-background-color;
 }
 
 .reviews__title {
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
+  .font(@main-font-bold; 25px; 30px);
   text-align: left;
 
   color: @main-header-color;
-}
-
-.reviews__list {
-
 }
 
 .reviews__item {
@@ -22,25 +14,19 @@
 }
 
 .reviews__user-text {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 30px;
+  .font(@main-font-regular; 15px; 30px);
 
   color: @main-text-color;
 }
 
 .reviews__user-name {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
+  .font(@main-font-bold; 18px; 24px);
 
   color: @main-header-color;
 }
 
 .reviews__user-email {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
+  .font(@main-font-regular; 18px; 24px);
 
   color: @main-text-color;
 }

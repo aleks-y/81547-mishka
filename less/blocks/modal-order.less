@@ -1,43 +1,27 @@
 .modal-order {
-  background-color: lighten(@main-background-color, 10%);
+  background-color: lighten(@main-background-color; 10%);
 }
 
 .modal-order__wraper {
-  font-family: @main-site-font;
-
   background-color: @main-background-color;
 }
 
 .modal-order__title {
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
+  .font(@main-font-bold; 25px; 30px);
   text-align: center;
 
   color: @main-header-color;
 }
 
-.modal-order__product-size {
-
-}
-
-.modal-order__form {
-
-}
-
 .modal-order__form-title {
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
+  .font(@main-font-bold; 25px; 30px);
   text-align: center;
 
   color: @main-text-color;
 }
 
 .modal-order__size-controls {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 30px;
+  .font(@main-font-regular; 15px; 30px);
   text-align: center;
 
   color: @main-text-color;
@@ -46,9 +30,7 @@
 .modal-order__size-label {
   display: block;
 
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 16px;
+  .font(@main-font-regular; 17px; 16px);
   text-align: center;
 
   color: @main-text-color;
