@@ -1,36 +1,141 @@
 .nav-main {
+  display: flex;
+
+  width: 100%;
+  min-height: 80px;
+  padding: 0 30px;
+  border-top: 1px solid @main-border-color;
+  border-bottom: 1px solid @main-border-color;
+  box-sizing: border-box;
+
+  background-color: @main-background-color;
+}
+
+.nav-main__logo-main {
   position: relative;
 
+  flex-grow: 1;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.nav-main__toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 21px;
+  height: 21px;
+
+  font-size: 0;
+
+  .input-reset;
+  background-color: #999999;
+
+  transform: translatey(-50%);
+}
+
+.nav-main__mobile {
+  position: absolute;
+  top: 80px;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+
   &--closed {
-    display: block;
+    display: none;
   }
 }
 
-.nav-main__togle {
-  position: absolute;
-
-  font-size: 0;
+.nav-main__additional-nav {
+  display: none;
 }
 
-.nav-main__wraper {
-  position: relative;
-}
-
-.nav-main__list {
-  padding: 0;
-  margin: 0;
-
-  list-style: none;
-}
-
-.nav-main__item {
+.nav-main__links-main .nav-main__link,
+.nav-main__user-nav .nav-main__link {
+  display: block;
+  min-width: 320px;
+  min-height: 80px;
+  padding: 28px 30px 28px 76px;
   border-bottom: 1px solid @main-border-color;
-}
+  box-sizing: border-box;
 
-.nav-main__link {
-  .font(@main-font-regular; 17px; 17px);
+  .font(@main-font-regular; 17px; 24px);
   text-align: left;
+  vertical-align: middle;
 
+  background-color: @main-background-color;
   color: @main-text-color;
   text-decoration: none;
+}
+
+@media @tablet-widths {
+  .nav-main {
+    justify-content: space-between;
+
+    min-height: 82px;
+    padding: 0 50px;
+  }
+
+  .nav-main__logo-main {
+    flex-grow: 0;
+
+    margin: auto 0;
+  }
+
+  .nav-main__toggle {
+    display: none;
+  }
+
+  .nav-main__wraper {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    flex-direction: row;
+    min-width: 100px;
+  }
+
+  .nav-main__links-main {
+    display: none;
+  }
+
+  .nav-main__user-nav {
+    display: flex;
+    align-content: streach;
+  }
+
+
+  .nav-main__user-nav .nav-main__link {
+    min-width: 80px;
+    padding: 0;
+    border: none;
+
+    &--search {
+      width: 80px;
+      border-left: 1px solid @main-border-color;
+
+      font-size: 0;
+    }
+
+    &--cart {
+      padding: 29px 0 29px 84px;
+      border-left: 1px solid @main-border-color;
+    }
+  }
+  .nav-main__additional-nav {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 50px;
+  }
+
 }

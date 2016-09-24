@@ -1,6 +1,8 @@
 .banner {
-  width: 320px;
+  width: 100%;
   height: 282px;
+  padding: 75px 30px;
+  box-sizing: border-box;
 
   background-color: @main-background-color;
   background-image: url("../../img/hero-mobile@1x.jpg");
@@ -9,7 +11,28 @@
 }
 
 .banner__title {
+  padding: 0;
+  margin: 0;
+
   .font(@main-font-bold; 27px; 30px);
+  text-align: center;
 
   color: @main-header-color;
+}
+
+@media @tablet-widths {
+  .banner {
+    height: 746px;
+    padding: 160px 50px 50px;
+  }
+
+  .banner__title {
+    .font(@main-font-bold; 43px; 50px);
+  }
+}
+
+@media @desktop-widths {
+  .banner__title {
+    .font(@main-font-bold; 53px; 57px);
+  }
 }
