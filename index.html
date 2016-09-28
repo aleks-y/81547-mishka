@@ -45,30 +45,36 @@
             <a href="#" class="catalog-categories__link catalog-categories__link--toys">Детсткие игрушки</a>
           </ul>
         </section>
-        <section class="product product--of-the-week">
-          <h2 class="product__title">Вязаные корзинки</h2>
-          <div class="product__label">товар недели</div>
-          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
-          <table class="product__features">
-            <caption class="visualy-hidden">Характеристики вязаной корзинки</caption>
-            <tr>
-              <th class="product__feature-title">Цвет:</th>
-              <td class="product__feture-item">Тиффани/серый</td>
-            </tr>
-            <tr>
-              <th class="product__feature-title">Диаметр:</th>
-              <td class="product__feture-item">25 см</td>
-            </tr>
-            <tr>
-              <th class="product__feature-title">Высота:</th>
-              <td class="product__feture-item">15 см</td>
-            </tr>
-          </table>
+        <section class="product">
+          <div class="product__title">
+            <h2>Вязаные корзинки</h2>
+            <div class="product__label">товар недели</div>
+          </div>
+          <div class="product__description">
+            <p class="product__short-description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
+            <table class="product__features">
+              <caption class="visualy-hidden">Характеристики вязаной корзинки</caption>
+              <tr>
+                <th class="product__feature-title">Цвет:</th>
+                <td class="product__feture-item">Тиффани/серый</td>
+              </tr>
+              <tr>
+                <th class="product__feature-title">Диаметр:</th>
+                <td class="product__feture-item">25 см</td>
+              </tr>
+              <tr>
+                <th class="product__feature-title">Высота:</th>
+                <td class="product__feture-item">15 см</td>
+              </tr>
+            </table>
+          </div>
           <div class="product__image">
             <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           </div>
-          <div class="product__price">Цена: 990 руб.</div>
-          <button class="btn btn--order" type="button">Заказать</button>
+          <div class="product__order">
+            <div class="product__price">Цена: 990 руб.</div>
+            <button class="btn btn--order" type="button">Заказать</button>
+          </div>
         </section>
         <section class="about">
           <h2 class="about__title">Коротко о нас:</h2>
@@ -86,15 +92,17 @@
           <div class="reviews__list">
             <div class="reviews__item">
               <p class="reviews__user-text">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильнее, а&nbsp;также набирают больше лайков!</p>
-              <div class="reviews__user-name">Анастасия Красильникова</div>
-              <div class="reviews__user-email">@misssssiskras</div>
+              <div class="reviews__user-info">
+                <div class="reviews__user-name">Анастасия Красильникова</div>
+                <div class="reviews__user-email">@misssssiskras</div>
+              </div>
+              <div class="reviews__slider-nav">
+                <a href="#" class="reviews__slider-control reviews__slider-control--prew">Предыдущий отзыв</a>
+                <a href="#" class="reviews__slider-control reviews__slider-control--next">Следующий отзыв</a>
+              </div>
             </div>
-            <div class="slider-nav">
-              <a href="#" class="slider-nav__btn slider-nav__btn--prew">Предыдущий отзыв</a>
-              <a href="#" class="slider-nav__btn slider-nav__btn--next">Следующий отзыв</a>
-            </div>
-            <a href="#" class="btn btn--add-review">Написать отзыв</a>
           </div>
+          <a href="#" class="btn reviews__add-review">Написать</a>
         </section>
         <section class="contacts">
           <h2 class="contacts__title">Контакты</h2>

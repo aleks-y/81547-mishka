@@ -1,8 +1,18 @@
 .reviews {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 30px;
+
   background-color: @main-background-color;
 }
 
 .reviews__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+
   .font(@main-font-bold; 25px; 30px);
   text-align: left;
 
@@ -14,9 +24,16 @@
 }
 
 .reviews__user-text {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   .font(@main-font-regular; 15px; 30px);
 
   color: @main-text-color;
+}
+
+.reviews__user-info {
+  margin-bottom: 30px;
 }
 
 .reviews__user-name {
@@ -29,4 +46,101 @@
   .font(@main-font-regular; 18px; 24px);
 
   color: @main-text-color;
+}
+
+.reviews__slider-nav {
+  display: flex;
+  flex-grow: 1;
+
+  height: 52px;
+  margin-bottom: 38px;
+  box-sizing: border-box;
+}
+
+.reviews__slider-control {
+  flex-basis: 50%;
+  flex-grow: 1;
+  border: 1px solid @main-border-color;
+
+  font-size: 0;
+
+  background-color: @main-background-color;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--prew {
+    border-right: none;
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg")
+  }
+}
+
+@media @tablet-widths {
+  .reviews {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+    min-height: 457px;
+    padding: 95px 50px 50px;
+    box-sizing: border-box;
+  }
+
+  .reviews__title {
+    order: -2;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .reviews__list {
+    display: flex;
+
+    flex-basis: 100%;
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .reviews__user-text {
+    flex-basis: 100%;
+    flex-grow: 1;
+
+    font-size: 17px;
+  }
+
+  .reviews__user-info {
+    flex-grow: 1;
+  }
+
+  .reviews__add-review {
+    order: -1;
+
+    flex-basis: 175px;
+  }
+
+  .reviews__slider-control {
+    flex-basis: 170px;
+    flex-grow: 0;
+  }
+
+  .reviews__slider-control {
+    border: none;
+  }
+
+}
+
+@media @desktop-widths {
+  .reviews {
+    padding: 95px 50px 100px 225px;
+  }
 }
