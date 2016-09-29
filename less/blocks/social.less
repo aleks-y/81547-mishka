@@ -1,13 +1,37 @@
 .social__list {
   .ul-reset;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 1 143px;
+
+  min-height: 80px;
+  min-width: 143px;
+
   font-size: 0;
+
+  background-color: transparent;
 }
 
 .social__item {
-  display: inline-block;
+  flex: 0 1 30px;
+  height: 30px;
 }
 
 .social__link {
   display: block;
+  width: 30px;
+  height: 30px;
+
+  background-color: @main-background-color;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media @tablet-widths {
+  .social__list {
+    flex: 0 1 33.3%;
+  }
 }
