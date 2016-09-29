@@ -86,3 +86,42 @@
     transform: translatey(-50%);
   }
 }
+
+@media @tablet-widths {
+  .catalog {
+    padding: 80px 50px 0;
+  }
+
+  .catalog__item {
+    flex-direction: row;
+
+    padding-bottom: 54px;
+  }
+
+  .catalog__image {
+    flex: 0 0 334px;
+
+    width: 334px;
+    height: 334px;
+  }
+
+  .catalog__item-description {
+    flex: 1 0;
+    justify-content: space-between;
+
+    padding: 0 33px;
+  }
+
+  .catalog__title {
+    font-size: 20px;
+  }
+
+  .catalog__item-features {
+    font-size: 15px;
+  }
+
+  .catalog__add-to-cart {
+    flex: 0 0 74px;
+    .font(@main-font-bold; 17px; 24px);
+  }
+}
