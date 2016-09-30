@@ -1,16 +1,28 @@
 .banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 100%;
-  height: 282px;
-  padding: 75px 30px;
+  min-height: 488px;
   box-sizing: border-box;
 
-  background-color: @main-background-color;
+  background-color: @banner-background-color;
   background-image: url("../../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
 }
 
+.banner__order-nav {
+  display: none;
+}
+
 .banner__title {
+  min-height: 282px;
+  padding: 75px 30px;
+  box-sizing: border-box;
+
+  h1 {
   padding: 0;
   margin: 0;
 
@@ -18,21 +30,119 @@
   text-align: center;
 
   color: @main-header-color;
+  }
+}
+
+.banner__categories-list {
+  .ul-reset;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__categories-link {
+  flex: 1 1 103px;
+
+  display: block;
+  min-width: 150px;
+  min-height: 103px;
+  padding: 29px 50% 29px 30px;
+  box-sizing: border-box;
+
+  .font(@main-font-bold; 19px; 24px);
+
+  color: #ffffff;
+  text-decoration: none;
+
+  &--interior {
+    background-color: @brand-color;
+    }
+
+  &--toys {
+    background-color: #56c3b2;
+    }
 }
 
 @media @tablet-widths {
   .banner {
-    height: 746px;
-    padding: 160px 50px 50px;
+    height: 758px;
+    padding: 0 50px;
+  }
+
+  .banner__order-nav {
+    flex: 0 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .banner__link {
+    padding: 20px 36px 20px 0;
+
+    .font(@main-font-bold, 15px, 24px);
+    text-decoration: none;
+
+    background-color: transparent;
+    color: @main-header-color;
+
+    &--delivery {
+      padding: 20px 0;
+
+      .font(@main-font-regular, 15px, 24px);
+
+      color: @main-text-color;
+    }
+  }
+
+  .banner__links-order {
+    display: none;
   }
 
   .banner__title {
     .font(@main-font-bold; 43px; 50px);
   }
+
+  .banner__categories-list {
+    flex: 0 0 131px;
+    flex-direction: row;
+  }
+
+  .banner__categories-item {
+    flex: 1 0 50%;
+    display: flex;
+}
+
+  .banner__categories-link {
+    padding: 30px 40% 30px 36px;
+
+    .font(@main-font-bold; 20px; 30px);
+  }
 }
 
 @media @desktop-widths {
+  .banner {
+    min-height: 763px;
+  }
+
+  .banner__links-catalog {
+    display: none;
+  }
+
+  .banner__links-order {
+    display: block;
+  }
+
   .banner__title {
-    .font(@main-font-bold; 53px; 57px);
+    h1 {
+      .font(@main-font-bold; 53px; 57px);
+    }
+  }
+
+  .banner__categories-list {
+    flex: 0 0 136px;
+  }
+
+  .banner__categories-link {
+    padding: 30px 70% 30px 40px;
   }
 }
