@@ -31,22 +31,22 @@
                 <a href="#" class="nav-main__link nav-main__link--cart">Корзина: пока пуста</a>
               </li>
             </ul>
+            <ul class="nav-main__order-items">
+              <li class="nav-main__item">
+                <a href="#" class="nav-main__link">Новые поступления</a>
+              </li>
+              <li class="nav-main__item">
+                <a href="#" class="nav-main__link">Распродажа</a>
+              </li>
+            </ul>
+            <ul class="nav-main__delivery-items">
+              <li class="nav-main__item">
+                <a href="#" class="nav-main__link">Бесплатная доставка по России</a>
+              </li>
+            </ul>
           </div>
         </nav>
         <section class="banner">
-          <div class="banner__order-nav">
-            <div class="banner__links-catalog">
-              <a href="catalog.html" class="banner__link">Каталог товаров</a>
-              <a href="form.html" class="banner__link">Вязание на заказ</a>
-            </div>
-            <div class="banner__links-order">
-              <a href="#" class="banner__link">Новые поступления</a>
-              <a href="#" class="banner__link">Распродажа</a>
-            </div>
-            <div class="banner__links-delivery">
-              <a href="#" class="banner__link banner__link--delivery">Бесплатная доставка по России</a>
-            </div>
-          </div>
           <div class="banner__title">
             <h1>Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
           </div>
@@ -61,36 +61,35 @@
         </section>
       </header>
       <main>
-        <section class="product">
-          <div class="product__title">
-            <h2>Вязаные корзинки</h2>
-            <div class="product__label">товар недели</div>
-          </div>
-          <div class="product__item">
-            <div class="product__description">
-              <p class="product__short-description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
-              <table class="product__features">
-                <caption class="visualy-hidden">Характеристики вязаной корзинки</caption>
-                <tr>
-                  <th class="product__feature-title">Цвет:</th>
-                  <td class="product__feture-item">Тиффани/серый</td>
-                </tr>
-                <tr>
-                  <th class="product__feature-title">Диаметр:</th>
-                  <td class="product__feture-item">25 см</td>
-                </tr>
-                <tr>
-                  <th class="product__feature-title">Высота:</th>
-                  <td class="product__feture-item">15 см</td>
-                </tr>
-              </table>
+        <section class="featured">
+          <div class="featured__wrapper">
+            <div class="featured__title">
+              <h2>Вязаные корзинки</h2>
+              <div class="featured__label">товар недели</div>
             </div>
-            <div class="product__image">
-              <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-            </div>
-            <div class="product__order">
-              <div class="product__price">Цена: 990 руб.</div>
-              <button class="btn btn--order" type="button">Заказать</button>
+            <div class="featured__item">
+              <p class="featured__short-description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
+              <div class="featured__features-table">
+                <div class="featured__features-row">
+                  <div class="featured__feature-title">Цвет:</div>
+                  <div class="featured__feture-item">Тиффани/серый</div>
+                </div>
+                <div class="featured__features-row">
+                  <div class="featured__feature-title">Диаметр:</div>
+                  <div class="featured__feture-item">25 см</div>
+                </div>
+                <div class="featured__features-row">
+                  <div class="featured__feature-title">Высота:</div>
+                  <div class="featured__feture-item">15 см</div>
+                </div>
+              </div>
+              <div class="featured__image">
+                <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+              </div>
+              <div class="featured__order">
+                <div class="featured__price">Цена: 990 руб.</div>
+                <button class="btn btn--order" type="button">Заказать</button>
+              </div>
             </div>
           </div>
         </section>
@@ -98,11 +97,11 @@
           <h2 class="about__title">Коротко о нас:</h2>
           <ul class="about__list">
             <li class="about__item about__item--ecology-icon">Экологически чистые материалы</li>
-            <li class="about__item about__item--style-icon">Скандинавский стиль по российской цене</li>
+            <li class="about__item about__item--style-icon">Скандинавский стиль по&nbsp;российской цене</li>
             <li class="about__item about__item--likes-icon">Увеличивает лайки на фотографиях</li>
-            <li class="about__item about__item--handmade-icon">Связано вручную с любовью и умилением</li>
+            <li class="about__item about__item--handmade-icon">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
             <li class="about__item about__item--domestic-icon">Поддержка отечественного производителя</li>
-            <li class="about__item about__item--gift-icon">Поставляется в подарочной упаковке</li>
+            <li class="about__item about__item--gift-icon">Поставляется в подарочной&nbsp;упаковке</li>
           </ul>
         </section>
         <section class="reviews">
@@ -144,18 +143,18 @@
       <div class="modal-order">
         <div class="modal-order__wrapper">
           <h2 class="modal-order__title">Добавить в корзину</h2>
-          <div class="modal-order__product-size">
+          <div class="modal-order__featured-size">
             <form action="#" method="post" class="modal-order__form">
               <h3 class="modal-order__form-title">Выберите размер:</h3>
               <div class="modal-order__size-controls">
-                <label for="product-size-s" class="modal-order__size-label">S
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-s" id="product-size-s">
+                <label for="featured-size-s" class="modal-order__size-label">S
+                  <input type="radio" class="modal-order__size-conrol" name="featured-size-s" id="featured-size-s">
                 </label>
-                <label for="product-size-m" class="modal-order__size-label">M
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-m" id="product-size-m">
+                <label for="featured-size-m" class="modal-order__size-label">M
+                  <input type="radio" class="modal-order__size-conrol" name="featured-size-m" id="featured-size-m">
                 </label>
-                <label for="product-size-l" class="modal-order__size-label">L
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-l" id="product-size-l">
+                <label for="featured-size-l" class="modal-order__size-label">L
+                  <input type="radio" class="modal-order__size-conrol" name="featured-size-l" id="featured-size-l">
                 </label>
               </div>
               <button class="btn btn--modal-order" type="button">Добавить</button>
