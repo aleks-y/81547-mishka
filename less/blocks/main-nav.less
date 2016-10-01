@@ -1,31 +1,37 @@
 .nav-main {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 
   min-width: 320px;
   width: 100%;
   min-height: 80px;
   padding: 0;
-  border-top: 1px solid @main-border-color;
-  border-bottom: 1px solid @main-border-color;
   box-sizing: border-box;
 
   background-color: @main-background-color;
 }
 
-.nav-main__logo-main {
+.nav-main__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 80px;
+}
+
+.nav-main__logo {
   position: relative;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 
-  height: 79px;
+  width: 100%;
+  height: 80px;
+  padding: 0 30px;
+  border-top: 1px solid @main-border-color;
   border-bottom: 1px solid @main-border-color;
-}
-
-.nav-main__logo-main img {
-  flex-grow: 1;
-
-  margin: auto;
+  box-sizing: border-box;
 }
 
 .nav-main__toggle {
@@ -39,32 +45,65 @@
   font-size: 0;
 
   .input-reset;
-  background-color: #999999;
+  background-image: url("../img/icon-menu-close.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
 
   transform: translatey(-50%);
 }
 
-.nav-main__links-order,
-.nav-main__links-delivery {
-  display: none;
+.nav-main--closed .nav-main__toggle {
+  background-image: url("../img/icon-menu-open.svg");
 }
 
-.nav-main__links-main a,
-.nav-main__user-nav a {
-  display: block;
-  min-width: 320px;
+.nav-main__items,
+.nav-main__user-items {
+  .ul-reset;
+}
+
+.nav-main__item {
   min-height: 80px;
-  padding: 28px 30px 28px 76px;
+  padding: 0 30px;
   border-bottom: 1px solid @main-border-color;
+  box-sizing: border-box;
+
+  background-color: @main-background-color;
+}
+
+.nav-main__link {
+  display: block;
+  min-height: 80px;
+  padding: 28px 0 28px 46px;
   box-sizing: border-box;
 
   .font(@main-font-bold; 17px; 24px);
   text-align: left;
   vertical-align: middle;
 
-  background-color: @main-background-color;
   color: @main-text-color;
   text-decoration: none;
+}
+
+@media @mobile-widths-only {
+  .nav-main--closed .nav-main__items,
+  .nav-main--closed .nav-main__user-items {
+    display: none;
+  }
+
+  .nav-main--no-js .nav-main__toggle {
+    display: none;
+  }
+
+  .nav-main--no-js .nav-main__wrapper {
+    position: static;
+
+    height: auto;
+  }
+
+  .nav-main--no-js .nav-main__items,
+  .nav-main--no-js .nav-main__user-items {
+    display: block;
+  }
 }
 
 @media @tablet-widths {
