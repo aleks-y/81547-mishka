@@ -2,7 +2,6 @@
   .input-reset;
 
   min-width: 150px;
-  width: 100%;
   height: 48px;
   border: 2px solid @main-text-color;
   box-sizing: border-box;
@@ -17,9 +16,133 @@
 }
 
 input[type="text"],
-input[type="phone"],
-input[type="e-mail"],
+input[type="tel"],
+input[type="email"],
 textarea {
   .input-reset;
 }
 
+label input[type="radio"],
+label input[type="checkbox"] {
+  display: none;
+}
+
+.input-radio,
+.input-checkbox {
+  position: relative;
+
+  flex: 1 0 100%;
+
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 0 0 62px;
+  margin-bottom: 22px;
+  box-sizing: border-box;
+
+  .font(@main-font-bold, 17px, 18px);
+  text-align: left;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid @secondary-border-color;
+    box-sizing: border-box;
+
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+  }
+}
+
+.input-radio {
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.input-text,
+.input-phone,
+.input-email {
+  flex: 1 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .font(@main-font-bold, 17px, 18px);
+  text-align: left;
+
+  label {
+    flex: 0 0 100%;
+
+    .font(@main-font-bold, 17px, 18px);
+    text-align: left;
+  }
+
+  input {
+    flex: 0 0 100%;
+
+    height: 52px;
+    border-bottom: 2px solid @secondary-border-color;
+    box-sizing: border-box;
+
+    .font(@main-font-regular, 17px, 18px);
+    text-align: left;
+
+    color: @main-text-color;
+  }
+}
+
+.input-message {
+  width: 100%;
+
+  .font(@main-font-bold, 17px, 18px);
+  text-align: left;
+
+  textarea {
+    width: 100%;
+    height: 142px;
+    padding: 15px;
+    border: 2px solid @secondary-border-color;
+    box-sizing: border-box;
+
+    .font(@main-font-regular, 17px, 18px);
+    text-align: left;
+
+    color: @main-text-color;
+  }
+}
+
+@media @tablet-widths {
+  .input-checkbox {
+    flex: 0 0 50%;
+  }
+
+  .input-text {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    label {
+      flex: 0 0 auto;
+
+      min-width: 53px;
+      padding-right: 20px;
+    }
+
+    input {
+      flex: 0 1 100%;
+    }
+  }
+
+
+
+}

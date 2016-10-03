@@ -98,15 +98,18 @@
                 <h3>ФИО</h3>
               </div>
               <div class="order-form__fieldset">
-                <label class="input-text">Имя:
-                  <input type="text" name="order-user-first-name" placeholder="Введите ваше имя" required>
-                </label>
-                <label class="input-text">Фамилия
-                  <input type="text" name="order-user-second-name" placeholder="Укажите фамилию" required>
-                </label>
-                <label class="input-text">Отчество:
-                  <input type="text" name="order-user-parent-name" placeholder="Отчество, если желаете">
-                </label>
+                <div class="input-text">
+                  <label for="order-user-first-name" class="input-text">Имя:</label>
+                  <input type="text" id="order-user-first-name" name="order-user-first-name" placeholder="Введите ваше имя" required>
+                </div>
+                <div class="input-text">
+                  <label for="order-user-second-name" class="input-text">Фамилия:</label>
+                  <input type="text" id="order-user-second-name" name="order-user-second-name" placeholder="Укажите фамилию" required>
+                </div>
+                <div class="input-text">
+                  <label for="order-user-parent-name" class="input-text">Отчество:</label>
+                  <input type="text" id="order-user-parent-name" name="order-user-parent-name" placeholder="Отчество, если желаете">
+                </div>
               </div>
             </div>
             <div class="order-form__section order-form__section--gray">
@@ -133,7 +136,7 @@
               </div>
               <div class="order-form__fieldset">
                 <label class="input-message">
-                  <textarea class="text-message" name="order-user-message" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+                  <textarea name="order-user-message" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
                 </label>
               </div>
             </div>
