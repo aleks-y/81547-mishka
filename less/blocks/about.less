@@ -4,11 +4,12 @@
 
 .about__container {
   .container;
+  padding: 27px 30px 30px;
   box-sizing: border-box;
 }
 
 .about__title {
-  margin: 0;
+  margin: 0 0 30px 0;
 
   .font(@main-font-bold; 25px; 30px);
   text-align: left;
@@ -27,8 +28,8 @@
   position: relative;
 
   flex-basis: 100%;
-  padding-top: 60px;
-  margin-top: 30px;
+  padding-top: 55px;
+  margin-bottom: 30px;
 
   .font(@main-font-bold; 17px; 19px);
 
@@ -40,14 +41,22 @@
     left: 0;
 
     display: block;
-    width: 38px;
-    height: 38px;
+    width: 50px;
+    height: 40px;
     background-color: @brand-color;
+    background-position: left top;
+    background-repeat: no-repeat;
   }
 }
 
 @media @tablet-widths {
+  .about__container {
+    padding: 48px 0 27px;
+  }
+
   .about__title {
+    margin-bottom: 48px;
+
     .font(@main-font-bold, 43px, 50px);
   }
 
@@ -58,6 +67,7 @@
   .about__item {
     flex-basis: 50%;
 
+    margin-bottom: 56px;
     box-sizing: border-box;
 
     .font(@main-font-bold, 20px, 22px);
@@ -94,7 +104,7 @@
 
 @media @desktop-widths {
   .about__container {
-    padding: 0 175px;
+    padding: 58px 175px 34px;
   }
 
   .about__title {
