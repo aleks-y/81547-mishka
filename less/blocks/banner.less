@@ -1,20 +1,18 @@
 .banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  width: 100%;
-  min-height: 488px;
-  box-sizing: border-box;
-
   background-color: @banner-background-color;
   background-image: url("../../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
 }
 
-.banner__order-nav {
-  display: none;
+.banner__container {
+  .container;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 488px;
 }
 
 .banner__title {
@@ -64,9 +62,8 @@
 }
 
 @media @tablet-widths {
-  .banner {
-    height: 758px;
-    padding: 0 50px;
+  .banner__container {
+    min-height: 758px;
   }
 
   .banner__title {
@@ -97,7 +94,7 @@
 }
 
 @media @desktop-widths {
-  .banner {
+  .banner__container {
     min-height: 763px;
   }
 

@@ -1,14 +1,15 @@
 .footer-main {
+  background-color: @secondary-background-color;
+}
+
+.footer-main__container {
+  .container;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  width: 100%;
   min-height: 160px;
-  padding: 0 30px;
   box-sizing: border-box;
-
-  background-color: @secondary-background-color;
 }
 
 .footer-main__logo {
@@ -61,7 +62,7 @@
 }
 
 @media @tablet-widths {
-  .footer-main {
+  .footer-main__container {
     flex-direction: row;
     justify-content: space-between;
 

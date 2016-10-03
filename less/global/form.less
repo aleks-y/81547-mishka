@@ -1,7 +1,7 @@
 .btn {
   .input-reset;
 
-  min-width: 150px;
+  width: 100%;
   height: 48px;
   border: 2px solid @main-text-color;
   box-sizing: border-box;
@@ -76,12 +76,15 @@ label input[type="checkbox"] {
   display: flex;
   flex-wrap: wrap;
 
+  margin-bottom: 20px;
 
   .font(@main-font-bold, 17px, 18px);
   text-align: left;
 
   label {
     flex: 0 0 100%;
+
+    margin: 0;
 
     .font(@main-font-bold, 17px, 18px);
     text-align: left;
@@ -126,7 +129,9 @@ label input[type="checkbox"] {
     flex: 0 0 50%;
   }
 
-  .input-text {
+  .input-text,
+  .input-phone,
+  .input-email {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -136,13 +141,23 @@ label input[type="checkbox"] {
 
       min-width: 53px;
       padding-right: 20px;
+
+      font-size: 19px;
     }
 
     input {
       flex: 0 1 100%;
+
+      font-size: 19px;
     }
   }
 
 
 
+}
+
+@media @desktop-widths {
+  .input-checkbox {
+    flex: 0 0 263px;
+  }
 }

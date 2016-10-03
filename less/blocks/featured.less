@@ -1,13 +1,13 @@
 .featured {
-  display: flex;
-  padding: 30px;
   box-sizing: border-box;
 
   background-color: @main-background-color;
 }
 
-.featured__wrapper {
-  flex: 0 0 100%;
+.featured__container {
+  .container;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -29,6 +29,7 @@
 
 .featured__label {
   margin-bottom: 26px;
+  box-sizing: border-box;
 
   .font(@main-font-bold; 17px; 17px);
   text-transform: uppercase;
@@ -103,7 +104,7 @@
 @media @tablet-widths {
   .featured {
     min-height: 613px;
-    padding: 0 50px 69px;
+    padding-bottom: 69px;
   }
 
   .featured__title {
@@ -176,13 +177,14 @@
 
 @media @desktop-widths {
   .featured {
-
     min-height: 786px;
-    padding: 54px 50px 96px;
+    padding: 54px 0 96px;
   }
 
-  .featured__wrapper {
+  .featured__container {
     position: relative;
+
+    min-height: 636px;
   }
 
   .featured__title {

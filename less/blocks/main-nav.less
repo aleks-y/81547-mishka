@@ -1,15 +1,20 @@
 .nav-main {
-  position: relative;
-
   min-width: 320px;
   width: 100%;
   min-height: 80px;
   padding: 0;
+
   border-top: 1px solid @main-border-color;
   border-bottom: 1px solid @main-border-color;
   box-sizing: border-box;
 
   background-color: @main-background-color;
+}
+
+.nav-main__container {
+  position: relative;
+
+  .container;
 }
 
 .nav-main__wrapper {
@@ -116,7 +121,6 @@
 @media @tablet-widths {
   .nav-main {
     height: 82px;
-    padding: 0 50px;
   }
 
   .nav-main__wrapper {

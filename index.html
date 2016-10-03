@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="page-wrapper">
-      <header class="header-main">
-        <nav class="nav-main nav-main--closed nav-main--no-js">
+    <header class="header-main">
+      <nav class="nav-main nav-main--closed nav-main--no-js">
+        <div class="nav-main__container">
           <div class="nav-main__wrapper">
             <div class="nav-main__logo">
               <img src="img/logo-mobile.svg" width="86" height="36" alt="логотип Мишки">
@@ -45,8 +45,10 @@
               </li>
             </ul>
           </div>
-        </nav>
-        <section class="banner">
+        </div>
+      </nav>
+      <section class="banner">
+        <div class="banner__container">
           <div class="banner__title">
             <h1>Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
           </div>
@@ -58,42 +60,44 @@
                 <a href="#" class="banner__categories-link banner__categories-link--toys">Детсткие игрушки</a>
               </li>
             </ul>
-        </section>
-      </header>
-      <main>
-        <section class="featured">
-          <div class="featured__wrapper">
-            <div class="featured__title">
-              <h2>Вязаные корзинки</h2>
-              <div class="featured__label">товар недели</div>
-            </div>
-            <div class="featured__item">
-              <p class="featured__short-description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
-              <div class="featured__features-table">
-                <div class="featured__features-row">
-                  <div class="featured__feature-title">Цвет:</div>
-                  <div class="featured__feture-item">Тиффани/серый</div>
-                </div>
-                <div class="featured__features-row">
-                  <div class="featured__feature-title">Диаметр:</div>
-                  <div class="featured__feture-item">25 см</div>
-                </div>
-                <div class="featured__features-row">
-                  <div class="featured__feature-title">Высота:</div>
-                  <div class="featured__feture-item">15 см</div>
-                </div>
-              </div>
-              <div class="featured__image">
-                <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-              </div>
-              <div class="featured__order">
-                <div class="featured__price">Цена: 990 руб.</div>
-                <button class="btn btn--order" type="button">Заказать</button>
-              </div>
-            </div>
           </div>
         </section>
-        <section class="about">
+    </header>
+    <main>
+      <section class="featured">
+        <div class="featured__container">
+          <div class="featured__title">
+            <h2>Вязаные корзинки</h2>
+            <div class="featured__label">товар недели</div>
+          </div>
+          <div class="featured__item">
+            <p class="featured__short-description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
+            <div class="featured__features-table">
+              <div class="featured__features-row">
+                <div class="featured__feature-title">Цвет:</div>
+                <div class="featured__feture-item">Тиффани/серый</div>
+              </div>
+              <div class="featured__features-row">
+                <div class="featured__feature-title">Диаметр:</div>
+                <div class="featured__feture-item">25 см</div>
+              </div>
+              <div class="featured__features-row">
+                <div class="featured__feature-title">Высота:</div>
+                <div class="featured__feture-item">15 см</div>
+              </div>
+            </div>
+            <div class="featured__image">
+              <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+            </div>
+            <div class="featured__order">
+              <div class="featured__price">Цена: 990 руб.</div>
+              <button class="btn" type="button">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container">
           <h2 class="about__title">Коротко о нас:</h2>
           <ul class="about__list">
             <li class="about__item about__item--ecology-icon">Экологически чистые материалы</li>
@@ -103,8 +107,10 @@
             <li class="about__item about__item--domestic-icon">Поддержка отечественного производителя</li>
             <li class="about__item about__item--gift-icon">Поставляется в подарочной&nbsp;упаковке</li>
           </ul>
-        </section>
-        <section class="reviews">
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="reviews__container">
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__list">
             <div class="reviews__item">
@@ -120,53 +126,55 @@
             </div>
           </div>
           <a href="#" class="btn reviews__add-review">Написать</a>
-        </section>
-        <section class="contacts">
-          <div class="contacts__wrapper">
-            <div class="contacts__map"></div>
-            <div class="contacts__title">
-              <h2>Контакты</h2>
-            </div>
-            <div class="contacts__table">
-              <div class="contacts__table-row">
-                <div class="contacts__info-title">e-mail:</div>
-                <div class="contacts__info-content">
-                  <a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a>
-                </div>
-              </div>
-              <div class="contacts__table-row">
-                <div class="contacts__info-title">адрес:</div>
-                <div class="contacts__info-content">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101</div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <div class="contacts__map"></div>
+          <div class="contacts__title">
+            <h2>Контакты</h2>
+          </div>
+          <div class="contacts__table">
+            <div class="contacts__table-row">
+              <div class="contacts__info-title">e-mail:</div>
+              <div class="contacts__info-content">
+                <a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a>
               </div>
             </div>
-            <button class="btn contacts__btn-feedback" type="button">Напишите нам</button>
+            <div class="contacts__table-row">
+              <div class="contacts__info-title">адрес:</div>
+              <div class="contacts__info-content">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101</div>
+            </div>
           </div>
-        </section>
-      </main>
-      <div class="modal-order">
-        <div class="modal-order__wrapper">
-          <h2 class="modal-order__title">Добавить в корзину</h2>
-          <div class="modal-order__featured-size">
-            <form action="#" method="post" class="modal-order__form">
-              <h3 class="modal-order__form-title">Выберите размер:</h3>
-              <div class="modal-order__size-controls">
-                <label for="featured-size-s" class="modal-order__size-label">S
-                  <input type="radio" class="modal-order__size-conrol" name="featured-size-s" id="featured-size-s">
-                </label>
-                <label for="featured-size-m" class="modal-order__size-label">M
-                  <input type="radio" class="modal-order__size-conrol" name="featured-size-m" id="featured-size-m">
-                </label>
-                <label for="featured-size-l" class="modal-order__size-label">L
-                  <input type="radio" class="modal-order__size-conrol" name="featured-size-l" id="featured-size-l">
-                </label>
-              </div>
-              <button class="btn btn--modal-order" type="button">Добавить</button>
-            </form>
-          </div>
+          <button class="btn contacts__btn-feedback" type="button">Напишите нам</button>
+        </div>
+      </section>
+    </main>
+    <div class="modal-order">
+      <div class="modal-order__wrapper">
+        <h2 class="modal-order__title">Добавить в корзину</h2>
+        <div class="modal-order__featured-size">
+          <form action="#" method="post" class="modal-order__form">
+            <h3 class="modal-order__form-title">Выберите размер:</h3>
+            <div class="modal-order__size-controls">
+              <label for="featured-size-s" class="modal-order__size-label">S
+                <input type="radio" class="modal-order__size-conrol" name="featured-size-s" id="featured-size-s">
+              </label>
+              <label for="featured-size-m" class="modal-order__size-label">M
+                <input type="radio" class="modal-order__size-conrol" name="featured-size-m" id="featured-size-m">
+              </label>
+              <label for="featured-size-l" class="modal-order__size-label">L
+                <input type="radio" class="modal-order__size-conrol" name="featured-size-l" id="featured-size-l">
+              </label>
+            </div>
+            <button class="btn btn--modal-order" type="button">Добавить</button>
+          </form>
         </div>
       </div>
-      <footer class="footer-main">
-        <div class="footer-main__logo">
+    </div>
+    <footer class="footer-main">
+        <div class="footer-main__container">
+          <div class="footer-main__logo">
           <a href="#" class="footer-main__logo-link">
             <img src="#" alt="логотип Мишки">
           </a>
@@ -187,8 +195,8 @@
         <div class="footer-main__academy-link">
           <a href="https://htmlacademy.ru">Разработано</a>
         </div>
-      </footer>
-    </div>
+        </div>
+    </footer>
   <script src="js/script.js"></script>
   </body>
 </html>

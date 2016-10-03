@@ -1,7 +1,10 @@
 .about {
-  padding: 30px;
-
   background-color: @main-background-color;
+}
+
+.about__container {
+  .container;
+  box-sizing: border-box;
 }
 
 .about__title {
@@ -44,10 +47,6 @@
 }
 
 @media @tablet-widths {
-  .about {
-    padding: 0 50px;
-  }
-
   .about__title {
     .font(@main-font-bold, 43px, 50px);
   }
@@ -94,8 +93,8 @@
 }
 
 @media @desktop-widths {
-  .about {
-    padding: 0 225px;
+  .about__container {
+    padding: 0 175px;
   }
 
   .about__title {
