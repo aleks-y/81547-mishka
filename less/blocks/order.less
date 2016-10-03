@@ -2,9 +2,26 @@
   background-color: @main-background-color;
 }
 
+.order__container {
+  .container;
+
+  padding: 0 30px;
+}
+
 .order__description {
   .font(@main-font-regular; 19px; 24px);
 
   color: @main-text-color;
 }
 
+@media @tablet-widths {
+  .order__description {
+    padding: 0;
+  }
+}
+
+@media @desktop-widths {
+  .order__description {
+    padding: 0 175px;
+  }
+}

@@ -2,124 +2,153 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="page-wraper">
-      <header class="header-main">
-        <div class="logo-main">
-          <img src="http://placehold.it/86x35" width="86" height="35" alt="логотип Мишки">
-        </div>
-        <nav class="nav-main nav-main--closed">
-          <button class="nav-main__toogle" type="button">Menu</button>
-          <div class="nav-main__wraper">
-            <ul class="nav-main__list">
+    <header class="header-main">
+      <nav class="nav-main nav-main--closed nav-main--no-js">
+        <div class="nav-main__container">
+          <div class="nav-main__wrapper">
+            <div class="nav-main__logo">
+              <a href="index.html">
+                <img src="img/logo-mobile.svg" width="86" height="36" alt="логотип Мишки">
+              </a>              <button class="nav-main__toggle" type="button">Menu</button>
+            </div>
+            <ul class="nav-main__items">
               <li class="nav-main__item">
-                <a href="#" class="nav-main__link">Каталог товаров</a>
+                <a href="catalog.html" class="nav-main__link">Каталог товаров</a>
               </li>
               <li class="nav-main__item">
-                <a href="#" class="nav-main__link">Вязание на заказ</a>
+                <a href="form.html" class="nav-main__link">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="nav-main__user-items">
+              <li class="nav-main__item nav-main__item">
+                <a href="#" class="nav-main__link nav-main__link--search">Поиск по сайту</a>
+              </li>
+              <li class="nav-main__item nav-main__item">
+                <a href="#" class="nav-main__link nav-main__link--cart">Корзина: пока пуста</a>
+              </li>
+            </ul>
+            <ul class="nav-main__order-items">
+              <li class="nav-main__item">
+                <a href="#" class="nav-main__link">Новые поступления</a>
               </li>
               <li class="nav-main__item">
-                <div class="site-search">
-                  <form action="#" method="get" class="site-search__form">
-                    <input type="search" class="site-search__input-search" placeholder="Поиск по сайту">
-                    <input type="submit" class="site-search__input-submit">
-                  </form>
-                </div>
+                <a href="#" class="nav-main__link">Распродажа</a>
               </li>
+            </ul>
+            <ul class="nav-main__delivery-items">
               <li class="nav-main__item">
-                <div class="cart">
-                  <a href="#" class="cart__link">
-                    <span class="cart__title">Корзина: </span>
-                    <span class="cart__status">пока пуста</span>
-                  </a>
-                </div>
+                <a href="#" class="nav-main__link">Бесплатная доставка по России</a>
               </li>
             </ul>
           </div>
-        </nav>
-      </header>
-      <main>
-        <h1 class="page-title page-title--inner">Каталог товаров</h1>
-        <section class="catalog">
+        </div>
+      </nav>
+      <h1 class="page-title page-title--inner">Каталог товаров</h1>
+    </header>
+    <main>
+      <section class="catalog">
+        <div class="catalog__container">
           <h2 class="visualy-hidden">Список товаров</h2>
           <div class="catalog__item">
-            <div class="catalog__image">
-              <img src="http://placehold.it/260x195" width="260" height="195" alt="Фото игрушки Зайчик-попрыгайчик">
+            <img class="catalog__image" src="http://placehold.it/260x195" width="260" height="195" alt="Фото игрушки Зайчик-попрыгайчик">
+            <div class="catalog__item-description">
+              <div class="catalog__short-description">
+                <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
+                <p class="catalog__item-features">Рост 30&nbsp;см, вес 200&nbsp;г</p>
+              </div>
+              <button class="catalog__add-to-cart" type="button">1&nbsp;200&nbsp;руб.</button>
             </div>
-            <h3 class="catalog__title">Зайчик-попрыгайчик</h3>
-            <div class="catalog__short-description">Рост 30&nbsp;см, вес 200&nbsp;г</div>
-            <div class="catalog__price">1&nbsp;200&nbsp;руб.</div>
-            <button class="catalog__add-to-cart" type="button"></button>
           </div>
           <div class="catalog__item">
-            <div class="catalog__image">
-              <img src="http://placehold.it/260x195" width="260" height="195" alt="Фото товара Корзинка для белья">
+            <img class="catalog__image" src="http://placehold.it/260x195" width="260" height="195" alt="Фото игрушки Зайчик-попрыгайчик">
+            <div class="catalog__item-description">
+              <div class="catalog__short-description">
+                <h3 class="catalog__title">Корзинка для белья</h3>
+                <p class="catalog__item-features">Диаметр 15&nbsp;см, выссота 10&nbsp;см</p>
+              </div>
+              <button class="catalog__add-to-cart" type="button">690&nbsp;руб.</button>
             </div>
-            <h3 class="catalog__title">Корзинка для белья</h3>
-            <div class="catalog__short-description">Диаметр 15&nbsp;см, выссота 10&nbsp;см</div>
-            <div class="catalog__price">690&nbsp;руб.</div>
-            <button class="catalog__add-to-cart" type="button"></button>
           </div>
           <div class="catalog__item">
-            <div class="catalog__image">
-              <img src="http://placehold.it/260x195" width="260" height="195" alt="Фото товара Большая корзинка для игрушек">
+            <img src="http://placehold.it/260x195" width="260" height="195" class="catalog__image" alt="Фото игрушки Зайчик-попрыгайчик">
+            <div class="catalog__item-description">
+              <div class="catalog__short-description">
+                <h3 class="catalog__title">Большая корзинка для игрушек</h3>
+                <p class="catalog__item-features">Диаметр 30 &nbsp;см, высота 30&nbsp;см</p>
+              </div>
+              <button class="catalog__add-to-cart" type="button">1&nbsp;500&nbsp;руб.</button>
             </div>
-            <h3 class="catalog__title">Большая корзинка для игрушек</h3>
-            <div class="catalog__short-description">Диаметр 30 &nbsp;см, высота 30&nbsp;см</div>
-            <div class="catalog__price">1&nbsp;500&nbsp;руб.</div>
-            <button class="catalog__add-to-cart" type="button"></button>
           </div>
-        </section>
-        <section class="video">
-          <h2 class="video__title">Процесс производства</h2>
+        </div>
+      </section>
+      <section class="video">
+        <div class="video__container">
           <div class="video__player">
+            <img src="#" width="682" height="455" alt="видео Процесс производства">
             <button class="video__player-button" type="button">Play</button>
           </div>
-          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <button class="btn btn--order" type="button">Сделать заказ</button>
-        </section>
-      </main>
-      <div class="modal-order">
-        <div class="modal-order__wraper">
-          <h2 class="modal-order__title">Добавить в корзину</h2>
-          <div class="modal-order__product-size">
-            <form action="#" method="post" class="modal-order__form">
-              <h3 class="modal-order__form-title">Выберите размер:</h3>
-              <div class="modal-order__size-controls">
-                <label for="product-size-s" class="modal-order__size-label">S
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-s" id="product-size-s">
-                </label>
-                <label for="product-size-m" class="modal-order__size-label">M
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-m" id="product-size-m">
-                </label>
-                <label for="product-size-l" class="modal-order__size-label">L
-                  <input type="radio" class="modal-order__size-conrol" name="product-size-l" id="product-size-l">
-                </label>
-              </div>
-              <button class="btn btn--modal-order" type="button">Добавить</button>
-            </form>
+          <div class="video__title">
+            <h2>Процесс производства</h2>
+          </div>
+          <div class="video__description">
+            <p>По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
+            <button class="btn video__order" type="button">Сделать заказ</button>
           </div>
         </div>
-      </div>
-      <footer class="footer-main">
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="#" class="social__link social__link--instagramm">Instagramm</a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link social__link--facebook">Facebook</a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link social__link--twitter">Twitter</a>
-            </li>
-          </ul>
+      </section>
+    </main>
+    <div class="modal-order">
+      <div class="modal-order__wrapper">
+        <h2 class="modal-order__title">Добавить в корзину</h2>
+        <div class="modal-order__product-size">
+          <form action="#" method="post" class="modal-order__form">
+            <h3 class="modal-order__form-title">Выберите размер:</h3>
+            <div class="modal-order__size-controls">
+              <label for="product-size-s" class="modal-order__size-label">S
+                <input type="radio" class="modal-order__size-conrol" name="product-size-s" id="product-size-s">
+              </label>
+              <label for="product-size-m" class="modal-order__size-label">M
+                <input type="radio" class="modal-order__size-conrol" name="product-size-m" id="product-size-m">
+              </label>
+              <label for="product-size-l" class="modal-order__size-label">L
+                <input type="radio" class="modal-order__size-conrol" name="product-size-l" id="product-size-l">
+              </label>
+            </div>
+            <button class="btn btn--modal-order" type="button">Добавить</button>
+          </form>
         </div>
-        <a href="https://htmlacademy.ru" class="footer-main__academy-link">Разработано</a>
-      </footer>
+      </div>
     </div>
+    <footer class="footer-main">
+        <div class="footer-main__container">
+          <div class="footer-main__logo">
+            <a href="#" class="footer-main__logo-link">
+              <img src="#" alt="логотип Мишки">
+            </a>
+          </div>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link social__link--instagramm">Instagramm</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--facebook">Facebook</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link social__link--twitter">Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-main__academy-link">
+            <a href="https://htmlacademy.ru">Разработано</a>
+          </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

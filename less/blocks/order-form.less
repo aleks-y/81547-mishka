@@ -1,0 +1,170 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  padding-bottom: 55px;
+}
+
+.order-form__section {
+  background-color: @main-background-color;
+}
+
+.order-form__container {
+  .container;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  padding: 0 30px;
+
+  box-sizing: border-box;
+}
+
+.order-form__subtitle {
+  position: relative;
+  z-index: 10;
+
+  flex: 0 0 100%;
+  display: flex;
+
+  min-height: 20px;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 5;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: @brand-color;
+
+    transform: translatey(-50%);
+  }
+
+  h3 {
+    position: relative;
+    z-index: 10;
+
+    min-width: 40px;
+    padding-right: 20px;
+    margin: 0;
+
+    .font(@main-font-bold, 17px, 16px);
+    text-align: left;
+    text-transform: uppercase;
+
+    color: @brand-color;
+    background-color: @main-background-color;
+  }
+}
+
+.order-form__fieldset {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.order-form__notice {
+  display: none;
+
+  .font(@main-font-regular, 14px, 14px);
+  text-align: left;
+
+  color: @main-text-color;
+
+  &--mobile {
+    display: block;
+  }
+}
+
+@media @tablet-widths {
+  .order-form__section {
+    flex-wrap: no-wrap;
+
+    padding: 60px 0 40px;
+
+    &--gray {
+      background-color: @secondary-background-color;
+    }
+  }
+
+  .order-form__container {
+    padding: 0;
+  }
+
+  .order-form__subtitle {
+    flex: 0 0 167px;
+
+    display: block;
+
+    min-height: 20px;
+
+    &::after {
+      display: none;
+    }
+
+    h3 {
+      min-width: 40px;
+      padding: 19px 0;
+
+      .font(@main-font-bold, 17px, 16px);
+      text-align: left;
+
+      color: @brand-color;
+      background-color: transparent;
+    }
+  }
+
+  .order-form__fieldset {
+    flex: 1 0 60%;
+  }
+
+  .order-form__notice {
+    order: 1;
+    flex: 1 0 50%;
+
+    display: block;
+
+    font-size: 17px;
+
+    &--mobile {
+      display: none;
+    }
+
+    text-align: right;
+  }
+
+  .form-order__submit {
+    flex: 0 0 230px;
+  }
+}
+
+@media @desktop-widths {
+  .order-form__subtitle {
+    flex: 0 0 175px;
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .order-form__container {
+    padding-right: 175px;
+
+    &--checkboxes {
+      padding-right: 0;
+    }
+
+    &--submit {
+      padding-left: 175px;
+    }
+  }
+}

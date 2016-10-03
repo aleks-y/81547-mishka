@@ -1,7 +1,32 @@
 .page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 176px;
+  padding: 0 30px;
+  margin: 0;
+
   .font(@main-font-bold; 27px; 30px);
 
   color: @main-header-color;
-
   background-color: @secondary-background-color;
+}
+
+@media @tablet-widths {
+  .page-title {
+    min-height: 225px;
+    padding: 0 50px;
+
+    .font(@main-font-bold; 43px; 50px);
+  }
+}
+
+@media @desktop-widths {
+  .page-title {
+    min-height: 250px;
+    padding: 0 50px;
+
+    .font(@main-font-bold; 53px; 57px);
+  }
 }

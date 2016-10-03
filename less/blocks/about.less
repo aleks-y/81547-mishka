@@ -1,10 +1,15 @@
 .about {
-  padding: 0 30px;
-
   background-color: @main-background-color;
 }
 
+.about__container {
+  .container;
+  box-sizing: border-box;
+}
+
 .about__title {
+  margin: 0;
+
   .font(@main-font-bold; 25px; 30px);
   text-align: left;
 
@@ -13,18 +18,93 @@
 
 .about__list {
   .ul-reset;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .about__item {
   position: relative;
 
-  .font(@main-font-bold; 17px; 17px);
+  flex-basis: 100%;
+  padding-top: 60px;
+  margin-top: 30px;
+
+  .font(@main-font-bold; 17px; 19px);
 
   &::before {
     content: "";
 
     position: absolute;
+    top: 0;
+    left: 0;
 
     display: block;
+    width: 38px;
+    height: 38px;
+    background-color: @brand-color;
+  }
+}
+
+@media @tablet-widths {
+  .about__title {
+    .font(@main-font-bold, 43px, 50px);
+  }
+
+  .about__list {
+    justify-content: space-between;
+  }
+
+  .about__item {
+    flex-basis: 50%;
+
+    box-sizing: border-box;
+
+    .font(@main-font-bold, 20px, 22px);
+
+    &:nth-child(-n+3) {
+      padding-right: 95px;
+    }
+
+    &--ecology-icon {
+      order: 0;
+    }
+
+    &--style-icon {
+      order: 2;
+    }
+
+    &--likes-icon {
+      order: 4;
+    }
+
+    &--handmade-icon {
+      order: 1;
+    }
+
+    &--domestic-icon {
+      order: 3;
+    }
+
+    &--gift-icon {
+      order: 5;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .about__container {
+    padding: 0 175px;
+  }
+
+  .about__title {
+    .font(@main-font-bold, 53px, 57px);
+  }
+
+  .about__item {
+
+    &:nth-child(-n+3) {
+      padding-right: 110px;
+    }
   }
 }
