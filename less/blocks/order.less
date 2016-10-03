@@ -4,6 +4,8 @@
 
 .order__container {
   .container;
+
+  padding: 0 30px;
 }
 
 .order__description {
@@ -12,3 +14,14 @@
   color: @main-text-color;
 }
 
+@media @tablet-widths {
+  .order__description {
+    padding: 0;
+  }
+}
+
+@media @desktop-widths {
+  .order__description {
+    padding: 0 175px;
+  }
+}
