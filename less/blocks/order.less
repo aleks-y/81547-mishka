@@ -6,22 +6,33 @@
   .container;
 
   padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .order__description {
-  .font(@main-font-regular; 19px; 24px);
+  margin: 23px 0 22px;
+  .font(@main-font-regular; 13px; 24px);
 
   color: @main-text-color;
 }
 
 @media @tablet-widths {
+  .order__container {
+    padding: 0;
+  }
+
   .order__description {
     padding: 0;
+    margin-top: 72px;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 
 @media @desktop-widths {
   .order__description {
-    padding: 0 175px;
+    padding: 0 178px;
+    margin-top: 125px
   }
 }

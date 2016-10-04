@@ -36,7 +36,6 @@ label input[type="checkbox"] {
   width: 100%;
   min-height: 40px;
   padding: 10px 0 0 62px;
-  margin-bottom: 22px;
   box-sizing: border-box;
 
   .font(@main-font-bold, 17px, 18px);
@@ -64,9 +63,15 @@ label input[type="checkbox"] {
 }
 
 .input-radio {
+  margin-bottom: 15px;
+
   &::before {
     border-radius: 50%;
   }
+}
+
+.input-checkbox {
+  margin-bottom: 21px;
 }
 
 .input-text,
@@ -76,7 +81,7 @@ label input[type="checkbox"] {
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   .font(@main-font-bold, 17px, 18px);
   text-align: left;
@@ -84,6 +89,7 @@ label input[type="checkbox"] {
   label {
     flex: 0 0 100%;
 
+    padding: 5px 0 1px;
     margin: 0;
 
     .font(@main-font-bold, 17px, 18px);
@@ -104,6 +110,18 @@ label input[type="checkbox"] {
   }
 }
 
+.input-text:last-child {
+  margin-bottom: 22px;
+}
+
+.input-phone {
+  margin-bottom: 28px;
+}
+
+.input-email {
+  margin-bottom: 23px;
+}
+
 .input-message {
   width: 100%;
 
@@ -114,6 +132,7 @@ label input[type="checkbox"] {
     width: 100%;
     height: 142px;
     padding: 15px;
+    margin-top: 24px;
     border: 2px solid @secondary-border-color;
     box-sizing: border-box;
     resize: none;
@@ -126,8 +145,31 @@ label input[type="checkbox"] {
 }
 
 @media @tablet-widths {
+  .input-radio,
   .input-checkbox {
-    flex: 0 0 50%;
+    min-height: 53px;
+    padding: 15px 0 0 80px;
+
+    font-size: 19px;
+
+    &::before {
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  .input-radio {
+    margin-bottom: 23px;
+  }
+
+  .input-checkbox {
+    flex: 0 0 40%;
+
+    margin-bottom: 23px;
+
+    &:nth-child(odd) {
+      flex: 0 0 53%;
+    }
   }
 
   .input-text,
@@ -137,28 +179,33 @@ label input[type="checkbox"] {
     flex-wrap: nowrap;
     align-items: center;
 
+    margin-bottom: 24px;
+
     label {
       flex: 0 0 auto;
 
       min-width: 53px;
-      padding-right: 20px;
+      padding-right: 23px;
 
       font-size: 19px;
     }
 
     input {
       flex: 0 1 100%;
+      padding: 0 17px;
 
       font-size: 19px;
     }
   }
 
-
-
+  .input-phone,
+  .input-email {
+    margin-bottom: 15px;
+  }
 }
 
 @media @desktop-widths {
-  .input-checkbox {
+  .input-checkbox:nth-child(n) {
     flex: 0 0 263px;
   }
 }
