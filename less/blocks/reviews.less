@@ -58,29 +58,36 @@
   display: flex;
   flex-grow: 1;
 
-  height: 52px;
+  min-height: 52px;
   margin-bottom: 38px;
   box-sizing: border-box;
 }
 
 .reviews__slider-control {
-  flex-basis: 50%;
-  flex-grow: 1;
+  flex: 1 0 50%;
+
+  min-height: 52px;
+  padding: 12px 15px;
   border: 1px solid @main-border-color;
+  box-sizing: border-box;
 
   font-size: 0;
+  text-align: center;
 
   background-color: @main-background-color;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  transition: all 0.2s;
 
   &--prew {
     border-right: none;
-    background-image: url("../img/icon-left-arrow.svg");
   }
 
-  &--next {
-    background-image: url("../img/icon-right-arrow.svg")
+  &:hover svg {
+    opacity: 0.6;
+  }
+
+  &:active svg {
+    opacity: 0.3;
   }
 }
 
