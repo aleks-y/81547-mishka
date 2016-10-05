@@ -184,11 +184,16 @@
   }
 
   .banner__categories-list {
-    flex: 0 0 136px;
+    min-height: 136px;
   }
 
   .banner__category-link {
+    min-height: 136px;
     padding: 30px 40px;
+
+    &::hover {
+      min-height: 141px;
+    }
   }
 
   .banner__category-name {

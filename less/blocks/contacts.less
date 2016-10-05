@@ -32,6 +32,10 @@
   }
 }
 
+.contacts__title-icon {
+  display: none;
+}
+
 .contacts__table {
   display: table;
   width: 320px;
@@ -140,25 +144,11 @@
       padding: 15px 50px 15px 0;
 
       .font(@main-font-bold; 43px; 50px);
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        display: block;
-        width: 50px;
-        height: 81px;
-
-        background-color: transparent;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("../img/icon-flag.svg");
-      }
     }
+  }
+
+  .contacts__title-icon {
+    display: block;
   }
 
   .contacts__table {
@@ -213,20 +203,13 @@
     align-self: flex-start;
     width: 50%;
     padding: 0;
-    margin: 62px 0 19px;
+    margin: 62px 0 15px;
 
     h2 {
       padding-right: 58px;
       padding-left: 0;
 
       font-size: 53px;
-
-      &::after {
-        top: 0;
-        left: 0;
-
-        width: 175px;
-      }
     }
   }
 
