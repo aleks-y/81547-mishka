@@ -1,11 +1,19 @@
 "use strict";
 
 var gulp = require("gulp");
-var less = require("gulp-less");
 var plumber = require("gulp-plumber");
+var del = require("del");
+var rename = require("gulp-rename");
+var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var mqpacker = require("css-mqpacker");
+var minify = require("gulp-csso");
+var imagemin = require("gulp-imagemin");
+var svgmin = require("gulp-svgmin");
+var svgstore = require("gulp-svgstore")
 var server = require("browser-sync").create();
+var run = require("run-sequence");
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -22,6 +30,16 @@ gulp.task("style", function() {
     ]))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
+});
+
+gulp.task("symbols", function() {
+  return gulp.src("img/icons/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest("img"));
 });
 
 gulp.task("serve", ["style"], function() {

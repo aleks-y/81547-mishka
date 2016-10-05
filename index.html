@@ -12,7 +12,11 @@
         <div class="nav-main__container">
           <div class="nav-main__wrapper">
             <div class="nav-main__logo">
-              <img src="img/logo-mobile.svg" width="86" height="36" alt="логотип Мишки">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишки">
+              </picture>
               <button class="nav-main__toggle" type="button">Menu</button>
             </div>
             <ul class="nav-main__items">
@@ -53,11 +57,25 @@
             <h1>Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
           </div>
             <ul class="banner__categories-list">
-              <li class="banner__categories-item">
-                <a href="#" class="banner__categories-link banner__categories-link--interior">Предметы интерьера</a>
+              <li class="banner__category-item">
+                <a href="#" class="banner__category-link banner__category-link--interior">
+                  <span class="banner__category-name">Предметы интерьера</span>
+                  <span class="banner__category-icon">
+                    <svg width="62" height="62">
+                      <use xlink:href="/img/symbols.svg#icon-interior"></use>
+                    </svg>
+                  </span>
+                </a>
               </li>
-              <li class="banner__categories-item">
-                <a href="#" class="banner__categories-link banner__categories-link--toys">Детские игрушки</a>
+              <li class="banner__category-item">
+                <a href="#" class="banner__category-link banner__category-link--toys">
+                  <span class="banner__category-name">Детские игрушки</span>
+                  <span class="banner__category-icon">
+                    <svg width="62" height="62">
+                      <use xlink:href="/img/symbols.svg#icon-toy"></use>
+                    </svg>
+                  </span>
+                </a>
               </li>
             </ul>
           </div>

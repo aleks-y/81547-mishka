@@ -46,19 +46,21 @@
   flex-direction: column;
 }
 
-.banner__categories-link {
-  flex: 1 1 103px;
-
+.banner__category-link {
   display: block;
+
   min-width: 150px;
   min-height: 103px;
-  padding: 25px 50% 25px 30px;
+  padding: 20px 30px 20px;
   box-sizing: border-box;
 
   .font(@main-font-bold; 19px; 24px);
+  text-align: justify;
 
   color: #ffffff;
   text-decoration: none;
+
+  transition: all 0.1s;
 
   &--interior {
     background-color: @brand-color;
@@ -67,6 +69,27 @@
   &--toys {
     background-color: #56c3b2;
     }
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
+}
+
+.banner__category-name {
+  width: 50%;
+}
+
+.banner__category-icon {
+  float: right;
+
+  svg {
+    fill: @brand-color-dark;
+  }
 }
 
 @media @tablet-widths {
@@ -109,21 +132,30 @@
   }
 
   .banner__categories-list {
-    flex: 0 0 131px;
+    flex: 0 0 auto;
     flex-direction: row;
+    align-items: flex-end;
+
+    min-height: 131px;
   }
 
-  .banner__categories-item {
+  .banner__category-item {
     flex: 1 0 50%;
-    display: flex;
 }
 
-  .banner__categories-link {
-    padding: 27px 40% 30px 36px;
+  .banner__category-link {
+    min-height: 131px;
+    padding: 30px 34px;
 
     .font(@main-font-bold; 20px; 30px);
+
+    &:hover {
+      min-height: 136px;
+    }
   }
 }
+
+// непонятно раскрывается css
 
 @media (min-width: 768px) and (min-resolution: 144dpi) {
   .banner {
@@ -137,6 +169,8 @@
   }
 }
 
+//
+
 @media @desktop-widths {
   .banner:after {
     height: 34px;
@@ -144,14 +178,6 @@
 
   .banner__container {
     min-height: 763px;
-  }
-
-  .banner__links-catalog {
-    display: none;
-  }
-
-  .banner__links-order {
-    display: block;
   }
 
   .banner__title {
@@ -164,7 +190,11 @@
     flex: 0 0 136px;
   }
 
-  .banner__categories-link {
-    padding: 30px 70% 30px 40px;
+  .banner__category-link {
+    padding: 30px 40px;
+  }
+
+  .banner__category-name {
+    width: 40%;
   }
 }
