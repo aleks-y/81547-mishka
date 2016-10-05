@@ -25,9 +25,21 @@
   width: 30px;
   height: 30px;
 
-  background-color: @main-background-color;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
+
+  svg {
+    fill: @link-color;
+  }
+
+  &:hover svg {
+    fill: @brand-color-2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media @tablet-widths {

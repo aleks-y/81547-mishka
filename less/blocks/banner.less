@@ -125,8 +125,13 @@
   }
 }
 
-@media @tablet-widths and (min-resolution: 144dpi),
-       @tablet-widths and (min-resolution: 1.5dppx) {
+@media (min-width: 768px) and (min-resolution: 144dpi) {
+  .banner {
+    background-image: url("../img/hero-desktop@2x.jpg");
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 1.5dppx) {
   .banner {
     background-image: url("../img/hero-desktop@2x.jpg");
   }
