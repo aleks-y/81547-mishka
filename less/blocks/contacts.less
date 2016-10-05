@@ -126,6 +126,8 @@
 
   .contacts__title {
     flex: 0 0 80px;
+    display: flex;
+    justify-content: space-between;
 
     width: 668px;
     padding: 0;
@@ -206,6 +208,8 @@
   }
 
   .contacts__title {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     align-self: flex-start;
     width: 50%;
     padding: 0;
@@ -213,7 +217,7 @@
 
     h2 {
       padding-right: 58px;
-      padding-left: 171px;
+      padding-left: 0;
 
       font-size: 53px;
 
@@ -224,6 +228,12 @@
         width: 175px;
       }
     }
+  }
+
+  .contacts__title-icon {
+    flex: 0 0 171px;
+
+    text-align: center;
   }
 
   .contacts__table {
