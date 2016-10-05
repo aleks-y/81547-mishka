@@ -15,9 +15,15 @@
 
   color: @main-text-color;
 
+  transition: all 0.2s ease;
+
   &:hover {
     color: @text-color-white;
     background-color: @main-text-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
