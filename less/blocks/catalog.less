@@ -25,6 +25,34 @@
 
   min-height: 100px;
   margin-bottom: 30px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &:hover .catalog__item-description {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover .catalog__title,
+  &:hover .catalog__add-to-cart {
+    opacity: 0.6;
+  }
+
+  &:hover svg {
+    opacity: 1;
+    fill: @brand-color-2;
+  }
+
+  &:active .catalog__item-description {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .catalog__title,
+  &:active .catalog__add-to-cart,
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .catalog__image {
@@ -87,11 +115,10 @@
 }
 
 .catalog__add-to-cart {
-  position: relative;
-
-  .input-reset;
-
   flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   min-height: 47px;
   border-top: 1px solid @main-border-color;
@@ -101,24 +128,10 @@
   text-align: left;
 
   color: @main-header-color;
+}
 
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    right: 0;
-
-    display: block;
-    width: 21px;
-    height: 21px;
-
-    background-color: @main-border-color;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    transform: translatey(-50%);
-  }
+.catalog__icon-cart svg {
+  fill: @menu-icon-color;
 }
 
 @media @tablet-widths {
@@ -175,7 +188,6 @@
 
     flex-direction: column;
     justify-content: flex-start;
-    align-items: streach;
     flex-wrap: wrap;
 
     min-height: 100px;

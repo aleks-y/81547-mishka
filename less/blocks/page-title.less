@@ -1,4 +1,6 @@
 .page-title {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +19,22 @@
     min-height: 225px;
 
     .font(@main-font-bold; 43px; 50px);
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 5;
+
+      display: block;
+      height: 24px;
+      width: 100%;
+
+      background: transparent url("../img/bg-zigzag-fill.svg") left center repeat-x;
+      background-size: contain;
+    }
   }
 }
 
@@ -25,5 +43,9 @@
     min-height: 250px;
 
     .font(@main-font-bold; 53px; 57px);
+
+    &::after {
+      height: 34px;
+    }
   }
 }
