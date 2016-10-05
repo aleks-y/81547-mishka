@@ -98,7 +98,7 @@
   height: 457px;
   margin: 0 auto 39px;
 
-  background-color: @brand-color;
+  background-color: transparent;
   background-image: url("../../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -142,9 +142,11 @@
         width: 50px;
         height: 81px;
 
-        background-color: @brand-color;
+        background-color: transparent;
         background-position: center;
         background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../img/icon-flag.svg");
       }
     }
   }
@@ -172,6 +174,8 @@
 
   .contacts__map {
     margin-bottom: 56px;
+    background-image: url("../../img/map-tablet@1x.jpg");
+
   }
 
   .contacts__btn-feedback {
@@ -229,6 +233,8 @@
 
     width: 50%;
     height: 457px;
+
+    background-image: url("../../img/map-desktop@1x.jpg");
   }
 
   .contacts__btn-feedback {
