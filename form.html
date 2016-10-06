@@ -86,12 +86,10 @@
                 <h3>Тип</h3>
               </div>
               <div class="order-form__fieldset">
-                <label class="input-radio">Аксесуар для интерьера
-                  <input type="radio" name="order-type-accessory" checked>
-                </label>
-                <label class="input-radio">Детская игрушка
-                  <input type="radio" name="order-type-toy">
-                </label>
+                <input type="radio" id="order-type-accessory" name="order-type" value="order-type-accessory" checked>
+                <label for="order-type-accessory" class="input-radio">Аксесуар для интерьера</label>
+                <input type="radio" id="order-type-toy" name="order-type" value="order-type-toy">
+                <label for="order-type-toy" class="input-radio">Детская игрушка</label>
               </div>
             </div>
           </div>
@@ -101,24 +99,18 @@
                 <h3>Цвет</h3>
               </div>
               <div class="order-form__fieldset">
-                <label class="input-checkbox">Белый
-                  <input type="checkbox" name="order-color-white" checked>
-                </label>
-                <label class="input-checkbox">Серый
-                  <input type="checkbox" name="order-color-gray" checked>
-                </label>
-                <label class="input-checkbox">"Тиффани"
-                  <input type="checkbox" name="order-color-tiffany">
-                </label>
-                <label class="input-checkbox">Черный
-                  <input type="checkbox" name="order-color-black">
-                </label>
-                <label class="input-checkbox">Розовый
-                  <input type="checkbox" name="order-color-pink">
-                </label>
-                <label class="input-checkbox">Оранжевый
-                  <input type="checkbox" name="order-color-orange">
-                </label>
+                <input type="checkbox" id="order-color-white" name="order-color-white" checked>
+                <label for="order-color-white" class="input-checkbox">Белый</label>
+                <input type="checkbox" id="order-color-gray" name="order-color-gray" checked>
+                <label for="order-color-gray" class="input-checkbox">Серый</label>
+                <input type="checkbox" id="order-color-tiffany" name="order-color-tiffany">
+                <label for="order-color-tiffany" class="input-checkbox">«Тиффани»</label>
+                <input type="checkbox" id="order-color-black" name="order-color-black">
+                <label for="order-color-black" class="input-checkbox">Черный</label>
+                <input type="checkbox" id="order-color-pink" name="order-color-pink">
+                <label for="order-color-pink" class="input-checkbox">Розовый</label>
+                <input type="checkbox" id="order-color-orange" name="order-color-orange">
+                <label for="order-color-orange" class="input-checkbox">Оранжевый</label>
               </div>
             </div>
           </div>
@@ -130,15 +122,15 @@
               <div class="order-form__fieldset">
                 <div class="input-text">
                   <label for="order-user-first-name" class="input-text">Имя:</label>
-                  <input type="text" id="order-user-first-name" name="order-user-first-name" placeholder="Введите ваше имя" required>
+                  <input type="text" id="order-user-first-name" name="order-user-first-name" pattern="[A-Za-zА-Яа-яЁё]" placeholder="Введите ваше имя" required>
                 </div>
                 <div class="input-text">
                   <label for="order-user-second-name" class="input-text">Фамилия:</label>
-                  <input type="text" id="order-user-second-name" name="order-user-second-name" placeholder="Укажите фамилию" required>
+                  <input type="text" id="order-user-second-name" name="order-user-second-name" pattern="[A-Za-zА-Яа-яЁё]" placeholder="Укажите фамилию" required>
                 </div>
                 <div class="input-text">
                   <label for="order-user-parent-name" class="input-text">Отчество:</label>
-                  <input type="text" id="order-user-parent-name" name="order-user-parent-name" placeholder="Отчество, если желаете">
+                  <input type="text" id="order-user-parent-name" name="order-user-parent-name" pattern="[A-Za-zА-Яа-яЁё]" placeholder="Отчество, если желаете">
                 </div>
               </div>
             </div>
@@ -151,6 +143,11 @@
               <div class="order-form__fieldset">
                 <label class="input-phone">
                   <input type="tel" name="order-user-phone" placeholder="+7 ХХХ ХХ ХХ" required>
+                  <span class="input-phone__icon">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/symbols.svg#icon-phone"></use>
+                    </svg>
+                  </span>
                 </label>
               </div>
             </div>
@@ -161,6 +158,11 @@
               <div class="order-form__fieldset">
                 <label class="input-email">
                   <input type="email" name="order-user-email" placeholder="Ваш Email" required>
+                  <span class="input-email__icon">
+                    <svg width="32" height="32">
+                      <use xlink:href="/img/symbols.svg#icon-mail"></use>
+                    </svg>
+                  </span>
                 </label>
               </div>
             </div>
