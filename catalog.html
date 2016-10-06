@@ -67,7 +67,11 @@
           </div>
         </div>
       </nav>
-      <h1 class="page-title page-title--inner">Каталог товаров</h1>
+      <div class="page-title">
+        <div class="page-title__container">
+          <h1>Каталог товаров</h1>
+        </div>
+      </div>
     </header>
     <main>
       <section class="catalog">
@@ -129,7 +133,7 @@
             </div>
             <div class="catalog__item-description">
               <div class="catalog__short-description">
-                <h3 class="catalog__title">Большая корзинка для игрушек</h3>
+                <h3 class="catalog__title">Большая корзинка для&nbsp;игрушек</h3>
                 <p class="catalog__item-features">Диаметр 30 &nbsp;см, высота 30&nbsp;см</p>
               </div>
               <div class="catalog__add-to-cart">
@@ -147,15 +151,23 @@
       <section class="video">
         <div class="video__container">
           <div class="video__player">
-            <img src="#" width="682" height="455" alt="видео Процесс производства">
-            <button class="video__player-button" type="button">Play</button>
+            <button class="video__player-button" type="button">Play
+              <svg width="102" height="77">
+                <use xlink:href="/img/symbols.svg#icon-play"></use>
+              </svg>
+            </button>
           </div>
           <div class="video__title">
+            <span class="video__title-icon">
+              <svg width="32" height="32">
+                <use xlink:href="/img/symbols.svg#icon-video"></use>
+              </svg>
+            </span>
             <h2>Процесс производства</h2>
           </div>
           <div class="video__description">
             <p>По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
-            <button class="btn video__order" type="button">Сделать заказ</button>
+            <a href="#" class="btn video__order" type="button">Сделать заказ</a>
           </div>
         </div>
       </section>

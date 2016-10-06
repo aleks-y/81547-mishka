@@ -142,7 +142,7 @@
 
   .banner__category-item {
     flex: 1 0 50%;
-}
+  }
 
   .banner__category-link {
     min-height: 131px;
@@ -156,17 +156,13 @@
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 144dpi) {
+@media @tablet-widths and (min-resolution: 144dpi),
+       @tablet-widths and (min-resolution: 1.5dppx) {
   .banner {
     background-image: url("../img/hero-desktop@2x.jpg");
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 1.5dppx) {
-  .banner {
-    background-image: url("../img/hero-desktop@2x.jpg");
-  }
-}
 
 @media @desktop-widths {
   .banner:after {

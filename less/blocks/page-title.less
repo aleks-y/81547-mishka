@@ -1,24 +1,26 @@
 .page-title {
   position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   min-height: 176px;
-  margin: 0;
 
-  .font(@main-font-bold; 27px; 30px);
-
-  color: @main-header-color;
   background-color: @secondary-background-color;
+}
+
+.page-title__container {
+  .container;
+  padding-top: 10px;
+
+  h1 {
+    .font(@main-font-bold; 27px; 30px);
+    text-align: center;
+
+    color: @main-header-color;
+  }
 }
 
 @media @tablet-widths {
   .page-title {
-    min-height: 225px;
-
-    .font(@main-font-bold; 43px; 50px);
+    min-height: 235px;
 
     &::after {
       content: "";
@@ -36,16 +38,34 @@
       background-size: contain;
     }
   }
+
+  .page-title__container {
+    padding-top: 66px;
+
+    h1 {
+      .font(@main-font-bold; 43px; 50px);
+
+      color: @main-header-color;
+    }
+  }
 }
 
 @media @desktop-widths {
   .page-title {
-    min-height: 250px;
-
-    .font(@main-font-bold; 53px; 57px);
+    min-height: 270px;
 
     &::after {
       height: 34px;
+    }
+  }
+
+  .page-title__container {
+    padding-top: 57px;
+
+    h1 {
+      .font(@main-font-bold; 53px; 57px);
+
+      color: @main-header-color;
     }
   }
 }
