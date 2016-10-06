@@ -19,15 +19,24 @@ gulp.task("clean", function() {
   return del("build");
 });
 
+gulp.task("clean-icons", function() {
+  return del("build/img/icons");
+});
+
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*{.woff,.woff2}",
-    "img/**",
-    "js/**",
+    "img/**/*{.jpg,.png,.svg}",
+    "js/**/*.js",
     "*.html"
     ], {
       base: "."
     })
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("copyhtml", function() {
+  return gulp.src("*.html")
     .pipe(gulp.dest("build"));
 });
 
@@ -72,22 +81,24 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
     server: "build",
+    livereload: true,
     notify: false,
     open: true,
     ui: false
   });
 
-  gulp.watch("build/less/**/*.less", ["style"]);
-  gulp.watch("build/*.html").on("change", server.reload);
+  gulp.watch("less/**/*.less", ["style"]);
+  gulp.watch("*.html", ["copyhtml"]).on("change", server.reload);
 });
 
 gulp.task("build", function(fn) {
   run(
       "clean",
       "copy",
+      "clean-icons",
       "style",
       "images",
       "symbols",
