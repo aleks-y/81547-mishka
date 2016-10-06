@@ -1,4 +1,7 @@
 .nav-main {
+  position: relative;
+  z-index: 10;
+
   min-width: 320px;
   width: 100%;
   min-height: 80px;
@@ -48,6 +51,22 @@
   box-sizing: border-box;
 }
 
+.nav-main__logo-link {
+  display: block;
+  width: 86px;
+  height: 35px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .nav-main__toggle {
   position: absolute;
   top: 0;
@@ -90,6 +109,34 @@
   color: @main-text-color;
   text-decoration: none;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:hover  svg {
+    fill: @brand-color-2;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--search,
+  &--cart {
+    padding-left: 0;
+  }
+}
+
+.nav-main__link-icon {
+  display: inline-block;
+  min-height: 18px;
+  margin-right: 28px;
+  vertical-align: middle;
+
+  svg {
+    fill: @menu-icon-color;
+  }
 }
 
 .nav-main__order-items,
@@ -144,6 +191,16 @@
 
     height: 89px;
     padding: 0;
+
+    img {
+      width: 113px;
+      height: 46px;
+    }
+  }
+
+  .nav-main__logo-link {
+    width: 113px;
+    height: 46px;
   }
 
   .nav-main__toggle {
@@ -204,17 +261,20 @@
   }
 
   .nav-main__user-items .nav-main__link {
-    .font(@main-font-bold, 17px, 24px);
+    min-height: 88px;
+
+    .font(@main-font-bold, 17px, 17px);
 
     &--search {
       width: 80px;
-      min-height: 80px;
-      padding: 0;
+      padding: 35px 20px 20px;
+
       font-size: 0;
+      text-align: center;
     }
 
     &--cart {
-      padding: 29px 0 29px 54px;
+      padding: 35px 0 20px;
     }
   }
 
@@ -229,8 +289,11 @@
     font-family: @main-font-regular;
     color: @main-text-color;
   }
-}
 
+  .nav-main__link-icon--search {
+    margin: 0;
+  }
+}
 
 @media @desktop-widths {
   .nav-main {
@@ -244,7 +307,18 @@
   .nav-main__logo {
     justify-content: center;
 
-    height: 87 px;
+    height: 87px;
+    border: none;
+
+    img {
+      width: 149px;
+      height: 72px;
+    }
+  }
+
+  .nav-main__logo-link {
+    width: 149px;
+    height: 72px;
   }
 
   .nav-main__items {
@@ -273,9 +347,9 @@
   }
 
   .nav-main__items .nav-main__link {
-    min-height: 82px;
-    padding: 29px 0;
-    .font(@main-font-bold, 17px, 24px);
+    min-height: 88px;
+    padding: 35px 0;
+    .font(@main-font-bold, 17px, 17px);
   }
 
   .nav-main__order-items {

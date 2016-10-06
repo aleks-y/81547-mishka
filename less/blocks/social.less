@@ -5,10 +5,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex: 0 1 143px;
 
   min-height: 80px;
-  min-width: 143px;
+  min-width: 150px;
 
   font-size: 0;
 
@@ -25,13 +24,24 @@
   width: 30px;
   height: 30px;
 
-  background-color: @main-background-color;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  line-height: 30px;
+  text-align: center;
 
-@media @tablet-widths {
-  .social__list {
-    flex: 0 1 33.3%;
+  background-color: transparent;
+
+  svg {
+    vertical-align: middle;
+
+    fill: @link-color;
+
+    transition: all 0.15s;
+  }
+
+  &:hover svg {
+    fill: @brand-color-2;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

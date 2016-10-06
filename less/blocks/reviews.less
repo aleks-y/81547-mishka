@@ -1,5 +1,26 @@
 .reviews {
+  position: relative;
+
   background-color: @main-background-color;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+
+    display: block;
+    width: 100%;
+    height: 7px;
+
+    background-color: transparent;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: left center;
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
 }
 
 .reviews__container {
@@ -58,29 +79,36 @@
   display: flex;
   flex-grow: 1;
 
-  height: 52px;
+  min-height: 52px;
   margin-bottom: 38px;
   box-sizing: border-box;
 }
 
 .reviews__slider-control {
-  flex-basis: 50%;
-  flex-grow: 1;
+  flex: 1 0 50%;
+
+  min-height: 52px;
+  padding: 12px 15px;
   border: 1px solid @main-border-color;
+  box-sizing: border-box;
 
   font-size: 0;
+  text-align: center;
 
   background-color: @main-background-color;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  transition: all 0.2s;
 
   &--prew {
     border-right: none;
-    background-image: url("../img/icon-left-arrow.svg");
   }
 
-  &--next {
-    background-image: url("../img/icon-right-arrow.svg")
+  &:hover svg {
+    opacity: 0.6;
+  }
+
+  &:active svg {
+    opacity: 0.3;
   }
 }
 
@@ -88,6 +116,15 @@
   .reviews {
     min-height: 457px;
     box-sizing: border-box;
+
+    background-image: url("../img/review@1x.jpg");
+    background-size: 350px auto;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    &::after {
+      height: 17px;
+    }
   }
 
   .reviews__container {
@@ -152,14 +189,33 @@
   }
 }
 
+@media @tablet-widths and (min-resolution: 144dpi),
+       @tablet-widths and (min-resolution: 1.5dppx) {
+  .reviews {
+    background-image: url("../img/review@2x.jpg");
+  }
+}
+
 @media @desktop-widths {
   .reviews {
     padding: 0 0 90px;
+
+    background-image: none;
+
+    &::after {
+      height: 23px;
+    }
   }
 
   .reviews__container {
+    align-content: flex-start;
     min-height: 457px;
     padding: 79px 0 0 175px;
+
+    background-image: url("../img/review@1x.jpg");
+    background-size: 350px auto;
+    background-position: left top;
+    background-repeat: no-repeat;
   }
 
   .reviews__title {
@@ -170,5 +226,12 @@
 
   .reviews__user-text {
     margin-bottom: 40px;
+  }
+}
+
+@media @desktop-widths and (min-resolution: 144dpi),
+       @desktop-widths and (min-resolution: 1.5dppx) {
+  .reviews__container {
+    background-image: url("../img/review@2x.jpg");
   }
 }
