@@ -253,22 +253,19 @@
         </div>
       </section>
     </main>
-    <div class="modal-order">
+    <div class="modal-order modal-order--modal-close">
       <div class="modal-order__wrapper">
-        <h2 class="modal-order__title">Добавить в корзину</h2>
+        <h2 class="modal-order__title">Добавить в&nbsp;корзину</h2>
         <div class="modal-order__featured-size">
           <form action="#" method="post" class="modal-order__form">
             <h3 class="modal-order__form-title">Выберите размер:</h3>
             <div class="modal-order__size-controls">
-              <label for="featured-size-s" class="modal-order__size-label">S
-                <input type="radio" class="modal-order__size-conrol" name="featured-size-s" id="featured-size-s">
-              </label>
-              <label for="featured-size-m" class="modal-order__size-label">M
-                <input type="radio" class="modal-order__size-conrol" name="featured-size-m" id="featured-size-m">
-              </label>
-              <label for="featured-size-l" class="modal-order__size-label">L
-                <input type="radio" class="modal-order__size-conrol" name="featured-size-l" id="featured-size-l">
-              </label>
+              <input type="radio" class="modal-order__size-conrol" name="featured-size" value="featured-size-s" id="featured-size-s" checked>
+              <label for="featured-size-s" class="modal-order__size-label">S</label>
+              <input type="radio" class="modal-order__size-conrol" name="featured-size" value="featured-size-m" id="featured-size-m">
+              <label for="featured-size-m" class="modal-order__size-label">M</label>
+              <input type="radio" class="modal-order__size-conrol" name="featured-size" value="featured-size-l" id="featured-size-l">
+              <label for="featured-size-l" class="modal-order__size-label">L</label>
             </div>
             <button class="btn btn--modal-order" type="button">Добавить</button>
           </form>
