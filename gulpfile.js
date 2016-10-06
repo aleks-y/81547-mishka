@@ -59,7 +59,8 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -84,14 +85,14 @@ gulp.task("symbols", function() {
 gulp.task("serve", function() {
   server.init({
     server: "build",
-    livereload: true,
     notify: false,
     open: true,
     ui: false
   });
 
   gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html", ["copyhtml"]).on("change", server.reload);
+  gulp.watch("*.html", ["copyhtml"]);
+  gulp.watch("build/*.html").on("change", server.reload);
 });
 
 gulp.task("build", function(fn) {
