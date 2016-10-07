@@ -2,7 +2,7 @@ var navMain = document.querySelector(".nav-main");
 var navToggle = document.querySelector(".nav-main__toggle");
 var btnOrderFeature = document.querySelector(".btn--order-feature");
 var modalOrder = document.querySelector(".modal-order");
-var btnMakeOrder = modalOrder.querySelector(".btn--make-order");
+var btnMakeOrder = document.querySelector(".btn--make-order");
 
 function navMobile() {
   navMain.classList.toggle("nav-main--closed");
