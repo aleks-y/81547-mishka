@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="header-main">
@@ -34,7 +34,7 @@
                 <a href="#" class="nav-main__link nav-main__link--search">
                   <span class="nav-main__link-icon nav-main__link-icon--search">
                     <svg width="18" height="18">
-                      <use xlink:href="/img/symbols.svg#icon-search"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-search"></use>
                     </svg>
                   </span>
                   Поиск по сайту
@@ -44,7 +44,7 @@
                 <a href="#" class="nav-main__link nav-main__link--cart">
                   <span class="nav-main__link-icon ">
                     <svg width="20" height="19">
-                      <use xlink:href="/img/symbols.svg#icon-cart"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-cart"></use>
                     </svg>
                   </span>
                   Корзина: пока пуста
@@ -94,7 +94,7 @@
                 <span class="catalog__price">1&nbsp;200&nbsp;руб.</span>
                 <span class="catalog__icon-cart">
                   <svg width="20" height="19">
-                    <use xlink:href="/img/symbols.svg#icon-cart"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-cart"></use>
                   </svg>
                 </span>
               </div>
@@ -117,7 +117,7 @@
                 <span class="catalog__price">690&nbsp;руб.</span>
                 <span class="catalog__icon-cart">
                   <svg width="20" height="19">
-                    <use xlink:href="/img/symbols.svg#icon-cart"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-cart"></use>
                   </svg>
                 </span>
               </div>
@@ -140,7 +140,7 @@
                 <span class="catalog__price">1&nbsp;500&nbsp;руб.</span>
                 <span class="catalog__icon-cart">
                   <svg width="20" height="19">
-                    <use xlink:href="/img/symbols.svg#icon-cart"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-cart"></use>
                   </svg>
                 </span>
               </div>
@@ -153,43 +153,40 @@
           <div class="video__player">
             <button class="video__player-button" type="button">Play
               <svg width="102" height="77">
-                <use xlink:href="/img/symbols.svg#icon-play"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-play"></use>
               </svg>
             </button>
           </div>
           <div class="video__title">
             <span class="video__title-icon">
               <svg width="32" height="32">
-                <use xlink:href="/img/symbols.svg#icon-video"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-video"></use>
               </svg>
             </span>
             <h2>Процесс производства</h2>
           </div>
           <div class="video__description">
             <p>По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
-            <a href="#" class="btn video__order" type="button">Сделать заказ</a>
+            <a href="#" class="btn video__order">Сделать заказ</a>
           </div>
         </div>
       </section>
     </main>
-    <div class="modal-order">
+    <div class="modal-order modal-order--modal-close">
       <div class="modal-order__wrapper">
-        <h2 class="modal-order__title">Добавить в корзину</h2>
-        <div class="modal-order__product-size">
+        <h2 class="modal-order__title">Добавить в&nbsp;корзину</h2>
+        <div class="modal-order__featured-size">
           <form action="#" method="post" class="modal-order__form">
             <h3 class="modal-order__form-title">Выберите размер:</h3>
             <div class="modal-order__size-controls">
-              <label for="product-size-s" class="modal-order__size-label">S
-                <input type="radio" class="modal-order__size-conrol" name="product-size-s" id="product-size-s">
-              </label>
-              <label for="product-size-m" class="modal-order__size-label">M
-                <input type="radio" class="modal-order__size-conrol" name="product-size-m" id="product-size-m">
-              </label>
-              <label for="product-size-l" class="modal-order__size-label">L
-                <input type="radio" class="modal-order__size-conrol" name="product-size-l" id="product-size-l">
-              </label>
+              <input type="radio" class="modal-order__size-conrol" name="featured-size" value="featured-size-s" id="featured-size-s" checked>
+              <label for="featured-size-s" class="modal-order__size-label">S</label>
+              <input type="radio" class="modal-order__size-conrol" name="featured-size" value="featured-size-m" id="featured-size-m">
+              <label for="featured-size-m" class="modal-order__size-label">M</label>
+              <input type="radio" class="modal-order__size-conrol" name="featured-size" value="featured-size-l" id="featured-size-l">
+              <label for="featured-size-l" class="modal-order__size-label">L</label>
             </div>
-            <button class="btn btn--modal-order" type="button">Добавить</button>
+            <button class="btn btn--make-order" type="submit">Добавить</button>
           </form>
         </div>
       </div>
@@ -199,7 +196,7 @@
           <div class="footer-main__logo">
             <a href="#" class="footer-main__logo-link">
               <svg width="103" height="34">
-                <use xlink:href="/img/symbols.svg#logo-footer"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#logo-footer"></use>
               </svg>
             </a>
           </div>
@@ -208,21 +205,21 @@
               <li class="social__item">
                 <a href="#" class="social__link social__link--instagramm">Instagramm
                   <svg width="22" height="22">
-                    <use xlink:href="/img/symbols.svg#icon-insta"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-insta"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link social__link--facebook">Facebook
                   <svg width="14" height="27">
-                    <use xlink:href="/img/symbols.svg#icon-fb"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link social__link--twitter">Twitter
                   <svg width="24" height="20">
-                    <use xlink:href="/img/symbols.svg#icon-twitter"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
@@ -232,7 +229,7 @@
             <a href="https://htmlacademy.ru" class="footer-main__academy-link">Разработано
               <span class="footer-main__academy-logo">
                 <svg width="24" height="37">
-                  <use xlink:href="/img/symbols.svg#logo-htmlacademy"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#logo-htmlacademy"></use>
                 </svg>
               </span>
             </a>
