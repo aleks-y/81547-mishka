@@ -175,7 +175,9 @@ input[type="checkbox"]:checked + .input-checkbox::before {
     color: @main-text-color;
 
     &:hover,
-    &:active {
+    &:active,
+    &:valid,
+    &:focus {
       border-color: @brand-color;
     }
 
