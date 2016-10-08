@@ -112,10 +112,10 @@
 
       display: block;
       height: 24px;
-      width: 100vw;
+      width: 100%;
 
       background: transparent url("../img/bg-zigzag-fill.svg") left bottom repeat-x;
-      background-size: contain;
+      background-size: auto 24px;
     }
   }
 
@@ -166,8 +166,10 @@
 
 
 @media @desktop-widths {
-  .banner:after {
+  .banner::after {
     height: 34px;
+
+    background-size: auto 34px;
   }
 
   .banner__container {

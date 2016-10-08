@@ -11,7 +11,8 @@ var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var svgmin = require("gulp-svgmin");
-var svgstore = require("gulp-svgstore")
+var svgstore = require("gulp-svgstore");
+var uglify = require('gulp-uglify');
 var server = require("browser-sync").create();
 var run = require("run-sequence");
 
@@ -56,7 +57,6 @@ gulp.task("style", function() {
         sort: true
       })
     ]))
-    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
