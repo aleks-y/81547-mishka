@@ -3,10 +3,11 @@ var navToggle = document.querySelector(".nav-main__toggle");
 var btnOrderFeature = document.querySelector(".btn--order-feature");
 var modalOrder = document.querySelector(".modal-order");
 var btnMakeOrder = document.querySelector(".btn--make-order");
+var catalog = document.querySelector(".catalog__container")
 
 function navMobile() {
   navMain.classList.toggle("nav-main--closed");
-};
+}
 
 navMain.classList.remove("nav-main--no-js");
 navToggle.addEventListener("click", navMobile);

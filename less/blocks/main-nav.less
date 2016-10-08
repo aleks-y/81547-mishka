@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: center;
 
-  height: 79px;
+  min-height: 79px;
   padding: 0 30px;
   border-bottom: 1px solid @main-border-color;
   box-sizing: border-box;
@@ -54,7 +54,7 @@
 .nav-main__logo-link {
   display: block;
   width: 86px;
-  height: 35px;
+  min-height: 35px;
 
   transition: all 0.2s;
 
@@ -73,7 +73,7 @@
   right: 30px;
 
   width: 21px;
-  height: 80px;
+  min-height: 80px;
 
   font-size: 0;
 
@@ -188,8 +188,9 @@
     flex: 0 0 120px;
     justify-content: flex-start;
 
-    height: 89px;
+    min-height: 89px;
     padding: 0;
+    border: none;
 
     img {
       width: 113px;
@@ -296,7 +297,7 @@
 
 @media @desktop-widths {
   .nav-main {
-    height: 89px;
+    min-height: 89px;
   }
 
   .nav-main__wrapper {

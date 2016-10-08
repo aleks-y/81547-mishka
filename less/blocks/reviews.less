@@ -18,7 +18,7 @@
     background-color: transparent;
     background-image: url("../img/bg-zigzag-line.svg");
     background-position: left center;
-    background-size: contain;
+    background-size: auto 7px;
     background-repeat: repeat-x;
   }
 }
@@ -124,6 +124,8 @@
 
     &::after {
       height: 17px;
+
+      background-size: auto 17px;
     }
   }
 
@@ -174,8 +176,9 @@
 
   .reviews__add-review {
     order: -1;
-
     flex-basis: 175px;
+
+    margin-bottom: 47px;
   }
 
   .reviews__slider-nav {
@@ -204,6 +207,8 @@
 
     &::after {
       height: 23px;
+
+      background-size: auto 23px;
     }
   }
 
